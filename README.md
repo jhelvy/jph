@@ -21,4 +21,4 @@ The following functions are included in this package:
 * `jColors()`      : Return a list of different color palettes.
 * `ggmultiplot()`  : Plots multiple ggplot objects into one plot frame.
 
-To view more details of any of the functions, run `?packageName()` in R.
+To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.
