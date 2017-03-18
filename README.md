@@ -8,9 +8,11 @@ First, make sure you have the `devtools` library installed:
 
 Then run these commands to install and load the `jhelvyr` library:
 
-`library('devtools')
+```
+library('devtools')
 install_github('jhelvyr','jhelvy')
-library('jhelvyr')`
+library('jhelvyr')
+```
 
 # Functions
 The following functions are included in this package:
