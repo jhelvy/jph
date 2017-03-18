@@ -1,4 +1,4 @@
-#' multiplot
+#' ggmultiplot
 #'
 #' This function plots multiple ggplot objects into one plot frame.
 #'
@@ -11,7 +11,7 @@
 #' @export
 #' @examples
 
-multiplot = function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+ggmultiplot = function(..., plotlist=NULL, file, cols=1, layout=NULL) {
     require(grid)
     # Make a list from the ... arguments and plotlist
     plots = c(list(...), plotlist)

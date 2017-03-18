@@ -17,6 +17,8 @@ library('jhelvyr')
 # Functions
 The following functions are included in this package:
 
-* `loadPackages` : Installs and loads multiple R packages.
-* `jColors`      : Returns a list of different color palettes.
-* `multiplot`    : Plots multiple ggplot objects into one plot frame.
+* `loadPackages()` : Install and load a series of R packages.
+* `jColors()`      : Return a list of different color palettes.
+* `ggmultiplot()`  : Plots multiple ggplot objects into one plot frame.
+
+To view more details of any of the functions, run `?packageName()` in R.
