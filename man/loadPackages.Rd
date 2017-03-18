@@ -19,6 +19,5 @@ The function first checks to see if the list of packages are installed.
 If they are not, it installs them and then loads them into the R session.
 }
 \examples{
-packagesToLoad = c('Hmisc', 'ggplot2', 'dplyr', 'tidyr')
-loadPackages(packagesToLoad)
+loadPackages(c('Hmisc', 'ggplot2', 'dplyr', 'tidyr'))
 }
