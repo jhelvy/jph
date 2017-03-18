@@ -2,11 +2,13 @@
 A bunch of useful functions and settings for working in R.
 
 # Installation
-In R, make sure you have the 'devtools' library installed, then run these commands:
+First, make sure you have the 'devtools' library installed:
+`install.packages('devtools')`
 
-`library('devtools')`
-`install_github('jhelvyr','jhelvy')`
-`library('jhelvyr')`
+Then run these commands to install and load the `jhelvyr` library:
+`library('devtools')
+install_github('jhelvyr','jhelvy')
+library('jhelvyr')`
 
 # Functions
 The following functions are included in this package:
