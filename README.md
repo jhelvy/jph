@@ -1,2 +1,2 @@
 # jhelvyr
-A bunch of functions and settings I find useful for working in R
+A bunch of useful functions and settings for working in R.

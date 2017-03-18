@@ -1,0 +1,16 @@
+Package: jhelvyr
+Title: A bunch of useful functions and settings for working in R. First written Saturday, March 18, 2017 in the Cathedral of Learning in Pittsburgh, PA.
+Version: 1.0.0
+Authors@R: person("John", "Helveston", email="john.helveston@gmail.com", role=c("aut", "cre", "cph"))
+Description: This library includes some useful custom functions.
+Depends: R (>= 3.3.1)
+Suggests:
+    Hmisc,
+    ggplot2,
+    grid,
+    dplyr,
+    tidyr
+License: This package is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, version 3, as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, but without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. See the GNU General Public License for more details. A copy of the GNU General Public License, version 3, is available at https://www.r-project.org/Licenses/GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1.9000
