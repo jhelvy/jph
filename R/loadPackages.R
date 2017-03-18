@@ -10,8 +10,7 @@
 #' @param pkgs a character vector with the names of the packages to load.
 #' @export
 #' @examples
-#' packagesToLoad = c('Hmisc', 'ggplot2', 'dplyr', 'tidyr')
-#' loadPackages(packagesToLoad)
+#' loadPackages(c('Hmisc', 'ggplot2', 'dplyr', 'tidyr'))
 
 loadPackages = function(pkgs){
     new.pkgs = pkgs[!(pkgs %in% installed.packages()[, "Package"])]
