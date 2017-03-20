@@ -2,7 +2,7 @@
 % Please edit documentation in R/ggmultiplot.R
 \name{ggmultiplot}
 \alias{ggmultiplot}
-\title{ggmultiplot}
+\title{Plot multiple ggplot objects into one plot frame.}
 \usage{
 ggmultiplot(..., plotlist = NULL, file, cols = 1, layout = NULL)
 }
@@ -13,8 +13,6 @@ ggmultiplot(..., plotlist = NULL, file, cols = 1, layout = NULL)
 }
 \description{
 This function plots multiple ggplot objects into one plot frame.
-}
-\details{
 A series of ggplot objects can be directly passed as ... or passed
 If the layout is something like matrix(c(1,2,3,3), nrow=2, byrow=TRUE),
 then plot 1 will go in the upper left, 2 will go in the upper right, and

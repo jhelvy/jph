@@ -2,7 +2,7 @@
 % Please edit documentation in R/jColors.R
 \name{jColors}
 \alias{jColors}
-\title{jColors}
+\title{A list of nice color palettes.}
 \usage{
 jColors(viewColors = FALSE)
 }

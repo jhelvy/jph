@@ -17,8 +17,14 @@ library('jhelvyr')
 # Functions
 The following functions are included in this package:
 
-* `loadPackages()` : Install and load a series of R packages.
-* `jColors()`      : Return a list of different color palettes.
-* `ggmultiplot()`  : Plots multiple ggplot objects into one plot frame.
+* `ggmultiplot()`    : Plot multiple ggplot objects into one plot frame.
+* `jColors()`        : A list of nice color palettes.
+* `loadPackages()`   : Install and load a series of R packages.
+* `sortByCol()`      : Sorts data frame or matrix by a desired column number.
+* `sourceDirFiles()` : Source all R files in a given directory.
+* `getMyPackageLibrary()` : Get a character list of all currently installed packages on your machine.
+* `installMyPackageLibrary()`: Install over 300 frequently-used packages.
 
 To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.
+
+

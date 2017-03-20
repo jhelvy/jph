@@ -1,4 +1,4 @@
-#' jColors
+#' A list of nice color palettes.
 #'
 #' Returns a list of different color palettes. Each palette is a data.frame.
 #' trove Palette found at http://colrd.com/palette/19308/

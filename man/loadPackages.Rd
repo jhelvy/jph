@@ -2,19 +2,17 @@
 % Please edit documentation in R/loadPackages.R
 \name{loadPackages}
 \alias{loadPackages}
-\title{loadPackages}
+\title{Install and load a series of R packages.}
 \usage{
 loadPackages(pkgs)
 }
 \arguments{
-\item{pkgs}{a character vector with the names of the packages to load.}
+\item{pkgs}{A character vector with the names of the packages to load.}
 }
 \description{
 This function installs and loads multiple R packages.
 It is the exact same function as the 'ipak' function by Steven Worthington,
 found at https://gist.github.com/stevenworthington/3178163.
-}
-\details{
 The function first checks to see if the list of packages are installed.
 If they are not, it installs them and then loads them into the R session.
 }
