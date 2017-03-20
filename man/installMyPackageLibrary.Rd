@@ -4,10 +4,7 @@
 \alias{installMyPackageLibrary}
 \title{Install over 300 frequently-used packages.}
 \usage{
-installMyPackageLibrary(packageList)
-}
-\arguments{
-\item{packageList}{An Rda file listing all the packages to install.}
+installMyPackageLibrary()
 }
 \description{
 This function installs a long list of packages that I frequently use.
@@ -15,6 +12,5 @@ I only use this after first installing R on a machine to get it ready for
 use.
 }
 \examples{
-load(file="./packageList.Rda")
 installMyPackageLibrary(packageList.Rda)
 }

@@ -1,4 +1,4 @@
-#' Install and load a series of R packages.
+#' Install and load multiple R packages.
 #'
 #' This function installs and loads multiple R packages.
 #' It is the exact same function as the 'ipak' function by Steven Worthington,
@@ -8,9 +8,9 @@
 #' @param pkgs A character vector with the names of the packages to load.
 #' @export
 #' @examples
-#' loadPackages(c('Hmisc', 'ggplot2', 'dplyr', 'tidyr'))
+#' loadMultiplePackages(c('Hmisc', 'ggplot2', 'dplyr', 'tidyr'))
 
-loadPackages = function(pkgs){
+loadMultiplePackages = function(pkgs){
     new.pkgs = pkgs[!(pkgs %in% installed.packages()[, "Package"])]
     if (length(new.pkgs))
         install.packages(new.pkgs, dependencies = TRUE)
