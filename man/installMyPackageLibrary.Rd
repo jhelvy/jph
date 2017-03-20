@@ -12,5 +12,5 @@ I only use this after first installing R on a machine to get it ready for
 use.
 }
 \examples{
-installMyPackageLibrary(packageList.Rda)
+installMyPackageLibrary()
 }

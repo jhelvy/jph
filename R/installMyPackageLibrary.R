@@ -5,11 +5,11 @@
 #' use.
 #' @export
 #' @examples
-#' installMyPackageLibrary(packageList.Rda)
+#' installMyPackageLibrary()
 
 installMyPackageLibrary = function(){
     require(RCurl)
-    text = getURL('https://github.com/jhelvy/jhelvyr/blob/master/packageList.csv?raw=true')
+    text = getURL('https://raw.githubusercontent.com/jhelvy/jhelvyr/master/myPackageList.csv')
     packageListDF = read.csv(text=text, header=T)
     packageList = as.character(packageListDF[,1])
     install.packages(
