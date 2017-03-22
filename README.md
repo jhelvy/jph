@@ -14,13 +14,13 @@ install_github('jhelvyr','jhelvy')
 library('jhelvyr')
 ```
 
-# Functions
-The following functions are included in this package:
+# Contents
+This package contains the following functions:
 
 * `ggmultiplot()`: Plot multiple ggplot objects into one plot frame.
 * `installMyPackageLibrary()`: Install over 300 frequently-used packages.
 * `jColors()`: A list of nice color palettes.
-* `loadMultiplePackages()`: Install and load multiple R packages.
+* `multiLibrary()`: Install and load multiple R packages.
 * `sortByCol()`: Sorts data frame or matrix by a desired column number.
 * `sourceDirFiles()`: Source all R files in a given directory.
 
