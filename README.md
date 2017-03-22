@@ -18,7 +18,7 @@ library('jhelvyr')
 This package contains the following functions:
 
 * `ggmultiplot()`: Plot multiple ggplot objects into one plot frame.
-* `installMyPackageLibrary()`: Install over 300 frequently-used packages.
+* `installMyPackageLibrary()`: Install over 300 frequently-used packages (see myPackageList.csv for list of libraries).
 * `jColors()`: A list of nice color palettes.
 * `multiLibrary()`: Install and load multiple R packages.
 * `sortByCol()`: Sorts data frame or matrix by a desired column number.
