@@ -1,4 +1,4 @@
-#' Install and load multiple R packages.
+#' Load multiple R packages at once.
 #'
 #' This function installs and loads multiple R packages. The function first
 #' checks to see if the list of packages are installed. If they are not, it

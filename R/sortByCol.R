@@ -1,4 +1,4 @@
-#' Sorts data frame or matrix by a desired column number.
+#' Sort a data frame or matrix by a desired column number.
 #'
 #' This function sorts a data frame or matrix by a desired column number.
 #' It essentially does the same function as \code{arrange} in the plyr

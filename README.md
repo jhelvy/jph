@@ -20,8 +20,8 @@ This package contains the following functions:
 * `ggmultiplot()`: Plot multiple ggplot objects into one plot frame.
 * `installMyPackageLibrary()`: Install over 300 frequently-used packages (see myPackageList.csv for list of libraries).
 * `jColors()`: A list of nice color palettes.
-* `multiLibrary()`: Install and load multiple R packages.
-* `sortByCol()`: Sorts data frame or matrix by a desired column number.
+* `multiLibrary()`: Load multiple R packages at once.
+* `sortByCol()`: Sort a data frame or matrix by a desired column number.
 * `sourceDirFiles()`: Source all R files in a given directory.
 
 To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.

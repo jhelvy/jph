@@ -2,7 +2,7 @@
 % Please edit documentation in R/multiLibrary.R
 \name{multiLibrary}
 \alias{multiLibrary}
-\title{Install and load multiple R packages.}
+\title{Load multiple R packages at once.}
 \usage{
 multiLibrary(pkgs)
 }

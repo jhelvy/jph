@@ -2,7 +2,7 @@
 % Please edit documentation in R/sortByCol.R
 \name{sortByCol}
 \alias{sortByCol}
-\title{Sorts data frame or matrix by a desired column number.}
+\title{Sort a data frame or matrix by a desired column number.}
 \usage{
 sortByCol(df, col)
 }
