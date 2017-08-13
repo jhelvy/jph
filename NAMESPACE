@@ -3,6 +3,7 @@
 export(ggmultiplot)
 export(installMyPackageLibrary)
 export(jColors)
+export(jTheme)
 export(multiLibrary)
 export(sortByCol)
 export(sourceDirFiles)
