@@ -4,7 +4,7 @@
 \alias{jColors}
 \title{A list of nice color palettes.}
 \usage{
-jColors(viewColors = FALSE)
+jColors(palette = "basic", colors = "black", preview = FALSE)
 }
 \description{
 Returns a list of different color palettes. Each palette is a data.frame.
@@ -12,11 +12,11 @@ trove Palette found at http://colrd.com/palette/19308/
 redToGray Palette found at http://colrd.com/palette/21894/
 }
 \examples{
-# View barplots of each color palette
-colors = jColors(viewColors=T)
+# View sample barplots of each color palette
+jColors(preview=T)
 
 # Select colors from palette by name
-colors = jColors()$basic[c('red', 'blue')]
+colors = jColors('basic', c('blue', 'red'))
 barplot(as.matrix(rep(1, 2)),
         beside=TRUE, las=2, axes=F, main='basic', col=colors,
         names.arg=c('basic-red', 'basic-blue'))

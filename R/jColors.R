@@ -6,23 +6,24 @@
 #' @keywords colors
 #' @export
 #' @examples
-#' # View barplots of each color palette
-#' colors = jColors(viewColors=T)
+#' # View sample barplots of each color palette
+#' jColors(preview=T)
 #'
 #' # Select colors from palette by name
-#' colors = jColors()$basic[c('red', 'blue')]
+#' colors = jColors('basic', c('blue', 'red'))
 #' barplot(as.matrix(rep(1, 2)),
 #'         beside=TRUE, las=2, axes=F, main='basic', col=colors,
 #'         names.arg=c('basic-red', 'basic-blue'))
 
-jColors = function(viewColors=FALSE) {
+jColors = function(palette='basic', colors='black', preview=FALSE) {
     basic = c(
         green  = '#8FC977FF',
         blue   = '#80C5DCFF',
         yellow = '#E8BF4DFF',
         orange = '#E37D39FF',
         red    = '#980000FF',
-        gray   = 'grey70')
+        gray   = 'grey70',
+        black  = 'black')
     extended = c(
         red        = "#e3394a",
         pink       = "#e3399e",
@@ -94,7 +95,14 @@ jColors = function(viewColors=FALSE) {
         brown        = '#a9834b',
         purple       = '#aa6688',
         gray         = '#767676')
-    if (viewColors) {
+    paletteList = list(
+        basic     = basic,
+        extended  = extended,
+        bright    = bright,
+        clean     = clean,
+        trove     = trove,
+        redToGray = redToGray)
+    if (preview) {
         par(mfrow=c(3,2))
         barplot(as.matrix(rep(1, length(basic))),
                 beside=TRUE, las=2, axes=F, main='basic',
@@ -120,8 +128,7 @@ jColors = function(viewColors=FALSE) {
                 beside=TRUE, las=2, axes=F, main='redToGray',
                 col=redToGray,
                 names.arg=names(redToGray))
+    } else {
+        return(as.character(paletteList[[palette]][colors]))
     }
-    return(list(basic=basic, extended=extended, bright=bright, clean=clean,
-                trove=trove, redToGray=redToGray))
 }
-
