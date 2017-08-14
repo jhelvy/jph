@@ -12,7 +12,7 @@
 jColors = function(viewColors=FALSE) {
     basic = data.frame(
         green  = '#8FC977FF',
-        blue   = '#80C5DCFF',
+        blue   = '#3288BD',
         yellow = '#E8BF4DFF',
         orange = '#E37D39FF',
         red    = '#980000FF',
@@ -33,6 +33,20 @@ jColors = function(viewColors=FALSE) {
         gray       = "grey70",
         darkgray   = "#666666",
         black      = "black", stringsAsFactors=F)
+    bright = data.frame(
+        green  = '#99D594',
+        blue   = '#80C5DCFF',
+        yellow = '#E6F598',
+        red    = '#F73753',
+        gray   = 'gray', stringsAsFactors=F)
+    clean = data.frame(
+        red    = '#FF3B3F',
+        # orange = '#F19F4D',
+        yellow = '#E6F598',
+        blue   = '#CAEBF2',
+        # green  = '#3CC47C',
+        light  = '#EFEFEF',
+        gray   = '#A9A9A9', stringsAsFactors=F)
     trove = data.frame(
         darkgreen   = '#51574a',
         green       = '#447c69',
@@ -77,7 +91,7 @@ jColors = function(viewColors=FALSE) {
         purple       = '#aa6688',
         gray         = '#767676', stringsAsFactors=F)
     if (viewColors) {
-        par(mfrow=c(2,2))
+        par(mfrow=c(3,2))
         barplot(as.matrix(rep(1, length(basic))),
                 beside=TRUE, las=2, axes=F, main='basic',
                 col=as.character(basic),
@@ -86,6 +100,14 @@ jColors = function(viewColors=FALSE) {
                 beside=TRUE, las=2, axes=F, main='extended',
                 col=as.character(extended),
                 names.arg=names(extended))
+        barplot(as.matrix(rep(1, length(bright))),
+                beside=TRUE, las=2, axes=F, main='bright',
+                col=as.character(bright),
+                names.arg=names(bright))
+        barplot(as.matrix(rep(1, length(clean))),
+                beside=TRUE, las=2, axes=F, main='clean',
+                col=as.character(clean),
+                names.arg=names(clean))
         barplot(as.matrix(rep(1, length(trove))),
                 beside=TRUE, las=2, axes=F, main='trove',
                 col=as.character(trove),
