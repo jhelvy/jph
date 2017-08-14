@@ -8,16 +8,22 @@
 #' @examples
 #' # View barplots of each color palette
 #' colors = jColors(viewColors=T)
+#'
+#' # Select colors from palette by name
+#' colors = jColors()$basic[c('red', 'blue')]
+#' barplot(as.matrix(rep(1, 2)),
+#'         beside=TRUE, las=2, axes=F, main='basic', col=colors,
+#'         names.arg=c('basic-red', 'basic-blue'))
 
 jColors = function(viewColors=FALSE) {
-    basic = data.frame(
+    basic = c(
         green  = '#8FC977FF',
-        blue   = '#3288BD',
+        blue   = '#80C5DCFF',
         yellow = '#E8BF4DFF',
         orange = '#E37D39FF',
         red    = '#980000FF',
-        gray   = 'grey70', stringsAsFactors=F)
-    extended = data.frame(
+        gray   = 'grey70')
+    extended = c(
         red        = "#e3394a",
         pink       = "#e3399e",
         darkred    = "#990000",
@@ -32,22 +38,20 @@ jColors = function(viewColors=FALSE) {
         darkpurple = "#7d39e3",
         gray       = "grey70",
         darkgray   = "#666666",
-        black      = "black", stringsAsFactors=F)
-    bright = data.frame(
+        black      = "black")
+    bright = c(
         green  = '#99D594',
-        blue   = '#80C5DCFF',
+        blue   = '#3288BD',
         yellow = '#E6F598',
         red    = '#F73753',
-        gray   = 'gray', stringsAsFactors=F)
-    clean = data.frame(
+        gray   = 'gray')
+    clean = c(
         red    = '#FF3B3F',
-        # orange = '#F19F4D',
         yellow = '#E6F598',
         blue   = '#CAEBF2',
-        # green  = '#3CC47C',
         light  = '#EFEFEF',
-        gray   = '#A9A9A9', stringsAsFactors=F)
-    trove = data.frame(
+        gray   = '#A9A9A9')
+    trove = c(
         darkgreen   = '#51574a',
         green       = '#447c69',
         lightgreen  = '#74c493',
@@ -68,8 +72,8 @@ jColors = function(viewColors=FALSE) {
         darkpink3   = '#e0598b',
         teal        = '#7c9fb0',
         blue        = '#5698c4',
-        jade        = '#9abf88', stringsAsFactors=F)
-    redToGray = data.frame(
+        jade        = '#9abf88')
+    redToGray = c(
         red          = '#ff1417',
         orange       = '#ff6611',
         redorange    = '#ff8844',
@@ -89,34 +93,35 @@ jColors = function(viewColors=FALSE) {
         peach        = '#d3a76d',
         brown        = '#a9834b',
         purple       = '#aa6688',
-        gray         = '#767676', stringsAsFactors=F)
+        gray         = '#767676')
     if (viewColors) {
         par(mfrow=c(3,2))
         barplot(as.matrix(rep(1, length(basic))),
                 beside=TRUE, las=2, axes=F, main='basic',
-                col=as.character(basic),
+                col=basic,
                 names.arg=names(basic))
         barplot(as.matrix(rep(1, length(extended))),
                 beside=TRUE, las=2, axes=F, main='extended',
-                col=as.character(extended),
+                col=extended,
                 names.arg=names(extended))
         barplot(as.matrix(rep(1, length(bright))),
                 beside=TRUE, las=2, axes=F, main='bright',
-                col=as.character(bright),
+                col=bright,
                 names.arg=names(bright))
         barplot(as.matrix(rep(1, length(clean))),
                 beside=TRUE, las=2, axes=F, main='clean',
-                col=as.character(clean),
+                col=clean,
                 names.arg=names(clean))
         barplot(as.matrix(rep(1, length(trove))),
                 beside=TRUE, las=2, axes=F, main='trove',
-                col=as.character(trove),
+                col=trove,
                 names.arg=names(trove))
         barplot(as.matrix(rep(1, length(redToGray))),
                 beside=TRUE, las=2, axes=F, main='redToGray',
-                col=as.character(redToGray),
+                col=redToGray,
                 names.arg=names(redToGray))
     }
-    return(list(basic=basic, extended=extended, trove=trove,
-                redToGray=redToGray))
+    return(list(basic=basic, extended=extended, bright=bright, clean=clean,
+                trove=trove, redToGray=redToGray))
 }
+

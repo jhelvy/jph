@@ -40,7 +40,8 @@ jTheme = function() {
     theme(legend.text = element_text(size=7,color=color.axis.title)) +
 
     # Set title and axis labels, and format these and tick marks
-    theme(plot.title=element_text(color=color.title, size=11, vjust=1.25)) +
+    # theme(plot.title=element_text(color=color.title, size=11, vjust=1.25)) +
+    theme(plot.title=element_text(color=color.title, size=11)) +
     theme(axis.text.x=element_text(size=10,color=color.axis.text)) +
     theme(axis.text.y=element_text(size=10,color=color.axis.text)) +
     theme(axis.title.x=element_text(size=11,color=color.axis.title, vjust=0)) +

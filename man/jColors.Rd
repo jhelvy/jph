@@ -14,5 +14,11 @@ redToGray Palette found at http://colrd.com/palette/21894/
 \examples{
 # View barplots of each color palette
 colors = jColors(viewColors=T)
+
+# Select colors from palette by name
+colors = jColors()$basic[c('red', 'blue')]
+barplot(as.matrix(rep(1, 2)),
+        beside=TRUE, las=2, axes=F, main='basic', col=colors,
+        names.arg=c('basic-red', 'basic-blue'))
 }
 \keyword{colors}
