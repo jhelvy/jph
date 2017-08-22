@@ -52,6 +52,19 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         blue   = '#CAEBF2',
         light  = '#EFEFEF',
         gray   = '#A9A9A9')
+    set3 = c(
+        teal        = '#8DD3C7',
+        lightyellow = '#FFFFB3',
+        lavender    = '#BEBADA',
+        red         = '#FB8072',
+        blue        = '#80B1D3',
+        orange      = '#FDB462',
+        green       = '#B3DE69',
+        pink        = '#FCCDE5',
+        gray        = '#D9D9D9',
+        purple      = '#BC80BD',
+        jade        = '#CCEBC5',
+        yellow      = '#FFED6F')
     trove = c(
         darkgreen   = '#51574a',
         green       = '#447c69',
@@ -100,10 +113,11 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         extended  = extended,
         bright    = bright,
         clean     = clean,
+        set3      = set3,
         trove     = trove,
         redToGray = redToGray)
     if (preview) {
-        par(mfrow=c(3,2))
+        par(mfrow=c(4,2))
         barplot(as.matrix(rep(1, length(basic))),
                 beside=TRUE, las=2, axes=F, main='basic',
                 col=basic,
@@ -120,6 +134,10 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
                 beside=TRUE, las=2, axes=F, main='clean',
                 col=clean,
                 names.arg=names(clean))
+        barplot(as.matrix(rep(1, length(set3))),
+                beside=TRUE, las=2, axes=F, main='set3',
+                col=set3,
+                names.arg=names(set3))
         barplot(as.matrix(rep(1, length(trove))),
                 beside=TRUE, las=2, axes=F, main='trove',
                 col=trove,
