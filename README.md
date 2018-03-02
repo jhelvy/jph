@@ -17,6 +17,7 @@ library('jhelvyr')
 # Contents
 This package contains the following functions:
 
+* `Cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
 * `ggmultiplot()`: Plot multiple ggplot objects into one plot frame.
 * `installMyPackageLibrary()`: Install over 300 frequently-used packages (see myPackageList.csv for list of libraries).
 * `jColors()`: A list of nice color palettes.
