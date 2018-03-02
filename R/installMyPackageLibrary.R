@@ -7,10 +7,10 @@
 #' @examples
 #' installMyPackageLibrary()
 
-installMyPackageLibrary = function(){
-    require(RCurl)
-    text = getURL('https://raw.githubusercontent.com/jhelvy/jhelvyr/master/myPackageList.csv')
-    packageListDF = read.csv(text=text, header=T)
+installMyPackageLibrary = function() {
+    packageListDF = read.csv(
+        file   = 'https://raw.github.com/jhelvy/jhelvyr/master/myPackageList.csv',
+        header = FALSE)
     packageList = as.character(packageListDF[,1])
     install.packages(
         packageList,

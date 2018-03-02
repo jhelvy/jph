@@ -10,7 +10,7 @@ Then run these commands to install and load the `jhelvyr` library:
 
 ```
 library('devtools')
-install_github('jhelvyr','jhelvy')
+install_github('jhelvy/jhelvyr')
 library('jhelvyr')
 ```
 
