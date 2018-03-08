@@ -1,5 +1,5 @@
 # jhelvyr
-A bunch of useful functions and settings for working in R.
+A bunch of useful functions for working in R.
 
 # Installation
 First, make sure you have the `devtools` library installed:
@@ -18,7 +18,7 @@ library('jhelvyr')
 This package contains the following functions:
 
 * `Cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
-* `ggmultiplot()`: Plot multiple ggplot objects into one plot frame.
+* `ggmultiplot()`: Plot multiple ggplot plots into one plot frame.
 * `installAllThePackages()`: Install loads of packages (>500) all at once.
 * `jColors()`: A list of nice color palettes.
 * `multiLibrary()`: Load multiple R packages at once.
