@@ -2,7 +2,7 @@
 
 export(Cs)
 export(ggmultiplot)
-export(installMyPackageLibrary)
+export(installAllThePackages)
 export(jColors)
 export(jTheme)
 export(multiLibrary)
