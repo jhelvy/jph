@@ -14,7 +14,7 @@ installAllThePackages = function(preview=F) {
     packageList = read.csv(
         file  = 'https://raw.github.com/jhelvy/jhelvyr/master/packageList.csv',
         header = FALSE)
-    packageList = as.character(packageListDF[,1])
+    packageList = as.character(packageList[,1])
     if (preview) {
         print(packageList)
     } else {
