@@ -17,10 +17,8 @@ installAllThePackages = function(preview=F) {
     if (preview) {
         print(packageList)
     } else {
-        install.packages(
-            packageList[1],
-            repos='https://cloud.r-project.org/',
-            dependencies=T)
+        install.packages(packageList[1], dependencies=T)
     }
 }
+
 
