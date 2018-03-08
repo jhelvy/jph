@@ -14,11 +14,13 @@ installAllThePackages = function(preview=F) {
     packageList = read.csv(
         file  = 'https://raw.github.com/jhelvy/jhelvyr/master/packageList.csv',
         header = FALSE)
+    packageList = as.character(packageListDF[,1])
     if (preview) {
         print(packageList)
     } else {
-        install.packages(packageList[1], dependencies=T)
+        install.packages(
+            packageList,
+            repos='https://cloud.r-project.org/',
+            dependencies=T)
     }
 }
-
-
