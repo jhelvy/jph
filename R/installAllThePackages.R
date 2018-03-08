@@ -10,7 +10,7 @@
 #' # Install all the packages:
 #' installAllThePackages()
 
-installAllThePackages = function(preview=T) {
+installAllThePackages = function(preview=F) {
     packageList = read.csv(
         file  = 'https://raw.github.com/jhelvy/jhelvyr/master/packageList.csv',
         header = FALSE)
