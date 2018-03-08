@@ -11,7 +11,7 @@
 #' installAllThePackages()
 
 installAllThePackages = function(preview=T) {
-    load('https://raw.github.com/jhelvy/jhelvyr/master/packageList.Rda')
+    load('https://raw.githubusercontent.com/jhelvy/jhelvyr/master/packageList.Rda')
     if (preview) {
         print(packageList)
     } else {
