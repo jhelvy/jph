@@ -11,7 +11,9 @@
 #' installAllThePackages()
 
 installAllThePackages = function(preview=T) {
-    load('https://raw.githubusercontent.com/jhelvy/jhelvyr/master/packageList.Rda')
+    packageList = read.csv(
+        file  = 'https://raw.github.com/jhelvy/jhelvyr/master/packageList.csv',
+        header = FALSE)
     if (preview) {
         print(packageList)
     } else {
@@ -21,3 +23,4 @@ installAllThePackages = function(preview=T) {
             dependencies=T)
     }
 }
+
