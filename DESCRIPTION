@@ -6,7 +6,6 @@ Description: This library includes some useful custom functions.
 URL: https://github.com/jhelvy/jhelvyr
 Depends: R (>= 3.3.1)
 Suggests:
-    Hmisc,
     ggplot2,
     grid,
     dplyr,
@@ -14,4 +13,4 @@ Suggests:
 License: GPL 3. A copy of the GNU General Public License, version 3, is available at https://www.r-project.org/Licenses/GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.0

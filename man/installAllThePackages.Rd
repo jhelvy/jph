@@ -4,7 +4,7 @@
 \alias{installAllThePackages}
 \title{Install loads of packages (>500) all at once.}
 \usage{
-installAllThePackages(preview = T)
+installAllThePackages(preview = F)
 }
 \description{
 This function installs a bunch of packages that I frequently use.

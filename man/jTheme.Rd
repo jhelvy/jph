@@ -9,3 +9,24 @@ jTheme()
 \description{
 This function loads some common settings for plotting in ggplot2.
 }
+\examples{
+# Make example plot:
+library(ggplot2)
+data("midwest", package = "ggplot2")
+plot <- ggplot(midwest, aes(x=area, y=poptotal)) +
+    geom_point(aes(col=state, size=popdensity)) +
+    geom_smooth(method="loess", se=F) +
+    xlim(c(0, 0.1)) +
+    ylim(c(0, 500000)) +
+    labs(subtitle="Area Vs Population",
+        y="Population",
+        x="Area",
+        title="Scatterplot",
+        caption = "Source: midwest")
+
+# Add jTheme
+plot + jTheme()
+
+# Add jTheme but keep legend
+plot + jTheme() + theme(legend.position="right")
+}
