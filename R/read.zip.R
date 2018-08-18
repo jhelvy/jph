@@ -12,6 +12,7 @@
 #'
 #' # View first data file:
 #' data = read.csv(filePaths[1], header=T)
+#' head(data)
 
 read.zip = function(url) {
     # Create a temporary folder

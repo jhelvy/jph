@@ -21,4 +21,5 @@ print(filePaths)
 
 # View first data file:
 data = read.csv(filePaths[1], header=T)
+head(data)
 }
