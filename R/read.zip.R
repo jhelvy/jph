@@ -7,13 +7,13 @@
 #' # Download and view fuel economy data for all U.S. vehicles
 #' # from 1980 to present (https://www.fueleconomy.gov/feg/download.shtml):
 #' url = 'https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip'
-#' filePaths = zip.read(url)
+#' filePaths = read.zip(url)
 #' print(filePaths)
 #'
 #' # View first data file:
 #' data = read.csv(filePaths[1], header=T)
 
-zip.read = function(url) {
+read.zip = function(url) {
     # Create a temporary folder
     td = tempdir()
     # Create the placeholder file

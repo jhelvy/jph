@@ -24,7 +24,7 @@ This package contains the following functions:
 * `multiLibrary()`: Load multiple R packages at once.
 * `sortByCol()`: Sort a data frame or matrix by a desired column number.
 * `sourceDirFiles()`: Source all R files in a given directory.
-* `zip.read()`: Downloads a zipped file from the web and return the local paths to each file.
+* `read.zip()`: Downloads a zipped file from the web and return the local paths to each file.
 
 To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.
 
