@@ -1,0 +1,30 @@
+#' Download a zipped file from the web and return the local paths to each file
+#'
+#' This function downloads and locally stores a zipped file from a url and then returns a list of the paths to each file
+#' @param url A url to a zipped file
+#' @export
+#' @examples
+#' sortByCol(cars, 2)
+#'
+#' # Download and view fuel economy data for all U.S. vehicles
+#' # from 1980 to present (https://www.fueleconomy.gov/feg/download.shtml):
+#' url = 'https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip'
+#' filePaths = zip.read(url)
+#' print(filePaths)
+
+zip.read = function(url) {
+    # Create a temporary folder
+    td = tempdir()
+    # Create the placeholder file
+    tf = tempfile(tmpdir=td, fileext='.zip')
+    # Download file into the placeholder file
+    download.file(url, tf)
+    # Get the name of the first file in the zip archive
+    fname = unzip(tf, list=TRUE)$Name[1]
+    # Unzip the file to the temporary directory
+    unzip(tf, files=fname, exdir=td, overwrite=TRUE)
+    # fpath is the full path to the extracted file
+    fpath = file.path(td, fname)
+    return(fpath)
+}
+
