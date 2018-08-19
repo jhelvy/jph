@@ -18,6 +18,7 @@ library('jhelvyr')
 This package contains the following functions:
 
 * `Cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
+* `concatCode()`: Prints the code to concatenate a set of strings.
 * `ggmultiplot()`: Plot multiple ggplot plots into one plot frame.
 * `installAllThePackages()`: Install loads of packages (>500) all at once.
 * `jColors()`: A list of nice color palettes.
