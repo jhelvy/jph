@@ -2,6 +2,7 @@
 
 export(Cs)
 export(concatCode)
+export(dummyCode)
 export(ggmultiplot)
 export(installAllThePackages)
 export(jColors)

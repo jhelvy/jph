@@ -19,13 +19,14 @@ This package contains the following functions:
 
 * `Cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
 * `concatCode()`: Prints the code to concatenate a set of strings.
+* `dummyCode()`: Creates dummy coded variables in a data frame..
 * `ggmultiplot()`: Plot multiple ggplot plots into one plot frame.
 * `installAllThePackages()`: Install loads of packages (>500) all at once.
 * `jColors()`: A list of nice color palettes.
 * `multiLibrary()`: Load multiple R packages at once.
+* `read.zip()`: Downloads a zipped file from the web and return the local paths to each file.
 * `sortByCol()`: Sort a data frame or matrix by a desired column number.
 * `sourceDirFiles()`: Source all R files in a given directory.
-* `read.zip()`: Downloads a zipped file from the web and return the local paths to each file.
 
 To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.
 
