@@ -7,7 +7,7 @@
 jTheme()
 }
 \description{
-This function loads some common settings for plotting in ggplot2.
+A custom theme for making plots in ggplot2.
 }
 \examples{
 # Make example plot:

@@ -6,11 +6,6 @@
 \usage{
 Cs(...)
 }
-\arguments{
-\item{path}{Path to directory.}
-
-\item{trace}{Defaults to TRUE.}
-}
 \description{
 Returns a vector of character strings from list of unquoted names.
 (Copied directly from the Hmisc package).

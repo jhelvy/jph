@@ -1,6 +1,6 @@
 Package: jhelvyr
 Title: A bunch of useful functions and settings for working in R. First written Saturday, March 18, 2017 in the Cathedral of Learning in Pittsburgh, PA.
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: person("John", "Helveston", email="john.helveston@gmail.com", role=c("aut", "cre", "cph"))
 Description: This library includes some useful custom functions.
 URL: https://github.com/jhelvy/jhelvyr

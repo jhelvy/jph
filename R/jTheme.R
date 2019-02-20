@@ -1,6 +1,6 @@
 #' Theme settings for plotting using ggplot2
 #'
-#' This function loads some common settings for plotting in ggplot2.
+#' A custom theme for making plots in ggplot2.
 #' @export
 #' @examples
 #' # Make example plot:
