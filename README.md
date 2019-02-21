@@ -20,6 +20,7 @@ This package contains the following functions:
 * `Cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
 * `dummyCode()`: Creates dummy coded variables in a data frame.
 * `ggmultiplot()`: Plot multiple ggplot plots into one plot frame.
+* `ggTornado()`: Creates a "tornado" plot using the ggplot2 library.
 * `installAllThePackages()`: Install loads of packages (>500) all at once.
 * `jColors()`: A list of nice color palettes.
 * `jTheme()`: A custom theme for making plots in ggplot2..
