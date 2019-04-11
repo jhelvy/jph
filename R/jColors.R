@@ -46,6 +46,13 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         yellow = '#E6F598',
         red    = '#F73753',
         gray   = 'gray')
+    stan = c(
+        light           = '#DCBCBC',
+        light_highlight = '#C79999',
+        mid             = '#B97C7C',
+        mid_highlight   = '#A25050',
+        dark            = '#8F2727',
+        dark_highlight  = '#7C0000')
     clean = c(
         red    = '#FF3B3F',
         yellow = '#E6F598',
@@ -112,6 +119,7 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         basic     = basic,
         extended  = extended,
         bright    = bright,
+        stan      = stan,
         clean     = clean,
         set3      = set3,
         trove     = trove,
@@ -130,6 +138,10 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
                 beside=TRUE, las=2, axes=F, main='bright',
                 col=bright,
                 names.arg=names(bright))
+        barplot(as.matrix(rep(1, length(stan))),
+                beside=TRUE, las=2, axes=F, main='stan',
+                col=stan,
+                names.arg=names(stan))
         barplot(as.matrix(rep(1, length(clean))),
                 beside=TRUE, las=2, axes=F, main='clean',
                 col=clean,
