@@ -4,10 +4,10 @@
 \alias{dummyCode}
 \title{Creates dummy coded variables in a data frame.}
 \usage{
-dummyCode(df, varNames)
+dummyCode(df, vars)
 }
 \arguments{
-\item{varNames}{The variables in the data frame for which you want to create new dummy coded variables}
+\item{vars}{The variables in the data frame for which you want to create new dummy coded variables}
 
 \item{data}{A data frame.}
 }
@@ -23,10 +23,10 @@ df = data.frame(
 df
 
 # Create dummy coded variables for the variable "animal":
-df.dummy = dummyCode(df, varNames="animal"))
+df.dummy = dummyCode(df, vars="animal"))
 df.dummy
 # Create dummy coded variables for the variables "animal" and "numLegs":
-df.dummy = dummyCode(df, varNames=c("animal", "numLegs"))
+df.dummy = dummyCode(df, vars=c("animal", "numLegs"))
 df.dummy
 
 }
