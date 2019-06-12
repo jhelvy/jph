@@ -1,6 +1,5 @@
 library(devtools)
 library(roxygen2)
-library(here)
 
 # Create the documentation for the package
 document()
