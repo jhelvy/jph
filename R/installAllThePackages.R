@@ -24,6 +24,6 @@ installAllThePackages = function(preview=F) {
             dependencies=T)
         # Install other packages from github
         library('devtools')
-        install_github('jhelvy/logitr')
+        install_github('jhelvy/logitr', force=T)
     }
 }
