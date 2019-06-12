@@ -2,7 +2,7 @@
 % Please edit documentation in R/installAllThePackages.R
 \name{installAllThePackages}
 \alias{installAllThePackages}
-\title{Install loads of packages (>500) all at once.}
+\title{Install lots of packages.}
 \usage{
 installAllThePackages(preview = F)
 }

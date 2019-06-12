@@ -1,4 +1,4 @@
-#' Install loads of packages (>500) all at once.
+#' Install lots of packages.
 #'
 #' This function installs a bunch of packages that I frequently use.
 #' Useful after first installing or upgrading R.
@@ -12,7 +12,7 @@
 
 installAllThePackages = function(preview=F) {
     packageList = read.csv(
-        file  = 'https://raw.github.com/jhelvy/jhelvyr/master/packageList.csv',
+        file = 'https://raw.github.com/jhelvy/jhelvyr/master/data/packageList.csv',
         header = FALSE)
     packageList = as.character(packageList[,1])
     if (preview) {
@@ -22,5 +22,8 @@ installAllThePackages = function(preview=F) {
             packageList,
             repos='https://cloud.r-project.org/',
             dependencies=T)
+        # Install other packages from github
+        library('devtools')
+        install_github('jhelvy/logitr')
     }
 }
