@@ -15,6 +15,4 @@ help(package=jhelvyr)
 
 # Install from github
 # library('devtools')
-# install_github('jhelvyr','jhelvy')
-# library('jhelvyr')
-# help(package=jhelvyr)
+# install_github('jhelvy/jhelvyr')
