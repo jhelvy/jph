@@ -4,9 +4,16 @@
 \alias{ggTornado}
 \title{Creates a "tornado" plot using the tidyverse library}
 \usage{
-ggTornado(df, baseline, varName = "var", levelName = "level",
-  valName = "val", resultName = "result", xlab = "Result",
-  ylab = "Parameter")
+ggTornado(
+  df,
+  baseline,
+  varName = "var",
+  levelName = "level",
+  valName = "val",
+  resultName = "result",
+  xlab = "Result",
+  ylab = "Parameter"
+)
 }
 \arguments{
 \item{df}{A data frame of the results of a sensitivity analysis.}

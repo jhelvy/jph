@@ -3,7 +3,6 @@
 export(Cs)
 export(dummyCode)
 export(ggTornado)
-export(ggmultiplot)
 export(jColors)
 export(jTheme)
 export(multiLibrary)

@@ -5,13 +5,11 @@ library(roxygen2)
 document()
 
 # Install the package
-setwd('..')
-install('jhelvyr')
+devtools::install(force = TRUE)
 
 # Load the package and view the summary
 library(jhelvyr)
-help(package=jhelvyr)
+help(package='jhelvyr')
 
 # Install from github
-# library('devtools')
-# install_github('jhelvy/jhelvyr')
+# remotes::install_github('jhelvy/jhelvyr')
