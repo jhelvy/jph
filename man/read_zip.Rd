@@ -18,10 +18,10 @@ returns a list of the paths to each file
 # Download and view fuel economy data for all U.S. vehicles
 # from 1980 to present (https://www.fueleconomy.gov/feg/download.shtml):
 url <- 'https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip'
-filePaths = read.zip(url)
+filePaths = read_zip(url)
 print(filePaths)
 
 # View first data file:
-data <- read.csv(filePaths[1], header = T)
+data <- read.csv(filePaths[1], header = TRUE)
 head(data)
 }
