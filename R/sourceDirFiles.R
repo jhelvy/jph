@@ -5,19 +5,12 @@
 #' @param trace Defaults to TRUE.
 #' @export
 #' @examples
-#' sourceDirFiles('filePath')
+#' source_dir('filePath')
 
-sourceDirFiles = function(path, trace=TRUE, ...) {
+source_dir <- function(path, trace = TRUE, ...) {
     for (nm in list.files(path, pattern = "\\.[RrSsQq]$")) {
-        if(trace) cat(nm, ":")
+        if (trace) cat(nm, ":")
         source(file.path(path, nm), ...)
-        if(trace) cat("\n")
+        if (trace) cat("\n")
     }
 }
-
-
-
-
-
-
-
