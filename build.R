@@ -1,15 +1,40 @@
-library(devtools)
-library(roxygen2)
+rm(list = ls())
+.rs.restartR()
+
+devtools::load_all()
+devtools::test()
 
 # Create the documentation for the package
-document()
+devtools::document()
 
 # Install the package
 devtools::install(force = TRUE)
 
+# Run all examples to save results
+source(here::here("inst", "example", "mnl_models.R"))
+source(here::here("inst", "example", "mnl_models_weighted.R"))
+source(here::here("inst", "example", "interactions.R"))
+source(here::here("inst", "example", "mxl_models.R"))
+source(here::here("inst", "example", "predict_choices.R"))
+source(here::here("inst", "example", "predict_probs.R"))
+source(here::here("inst", "example", "data_formatting.R"))
+
+# Build the pkgdown site
+pkgdown::build_site()
+
+# Check package
+devtools::check()
+devtools::check_win_release()
+devtools::check_win_devel()
+rhub::check_for_cran()
+
 # Load the package and view the summary
-library(jhelvyr)
-help(package='jhelvyr')
+library(logitr)
+help(package = 'logitr')
 
 # Install from github
-# remotes::install_github('jhelvy/jhelvyr')
+devtools::install_github('jhelvy/logitr')
+
+# Submit to CRAN
+devtools::release(check = TRUE)
+

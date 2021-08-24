@@ -1,5 +1,10 @@
-.Rproj.user
+foo.R
+build.R
 .Rhistory
-.RData
-.Ruserdata
 .DS_Store
+R/.DS_Store
+.Rproj.user
+docs
+doc
+Meta
+.idea
