@@ -24,7 +24,7 @@
 #' # Add jTheme but keep legend
 #' plot + jTheme() + theme(legend.position="right")
 
-jTheme = function() {
+jTheme <- function() {
 
     # Color sources
     # palette = brewer.pal("Greys", n=9)

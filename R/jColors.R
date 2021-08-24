@@ -7,16 +7,16 @@
 #' @export
 #' @examples
 #' # View sample barplots of each color palette
-#' jColors(preview=T)
+#' jColors(preview = TRUE)
 #'
 #' # Select colors from palette by name
-#' colors = jColors('basic', c('blue', 'red'))
+#' colors <- jColors('basic', c('blue', 'red'))
 #' barplot(as.matrix(rep(1, 2)),
-#'         beside=TRUE, las=2, axes=F, main='basic', col=colors,
-#'         names.arg=c('basic-red', 'basic-blue'))
+#'         beside = TRUE, las = 2, axes = F, main = 'basic', col = colors,
+#'         names.arg = c('basic-red', 'basic-blue'))
 
-jColors = function(palette='basic', colors='black', preview=FALSE) {
-    basic = c(
+jColors <- function(palette = 'basic', colors = 'black', preview = FALSE) {
+    basic <- c(
         green  = '#8FC977FF',
         blue   = '#80C5DCFF',
         yellow = '#E8BF4DFF',
@@ -24,7 +24,7 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         red    = '#980000FF',
         gray   = 'grey70',
         black  = 'black')
-    extended = c(
+    extended <- c(
         red        = "#e3394a",
         pink       = "#e3399e",
         darkred    = "#990000",
@@ -40,26 +40,26 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         gray       = "grey70",
         darkgray   = "#666666",
         black      = "black")
-    bright = c(
+    bright <- c(
         green  = '#99D594',
         blue   = '#3288BD',
         yellow = '#E6F598',
         red    = '#F73753',
         gray   = 'gray')
-    stan = c(
+    stan <- c(
         light           = '#DCBCBC',
         light_highlight = '#C79999',
         mid             = '#B97C7C',
         mid_highlight   = '#A25050',
         dark            = '#8F2727',
         dark_highlight  = '#7C0000')
-    clean = c(
+    clean <- c(
         red    = '#FF3B3F',
         yellow = '#E6F598',
         blue   = '#CAEBF2',
         light  = '#EFEFEF',
         gray   = '#A9A9A9')
-    set3 = c(
+    set3 <- c(
         teal        = '#8DD3C7',
         lightyellow = '#FFFFB3',
         lavender    = '#BEBADA',
@@ -72,7 +72,7 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         purple      = '#BC80BD',
         jade        = '#CCEBC5',
         yellow      = '#FFED6F')
-    trove = c(
+    trove <- c(
         darkgreen   = '#51574a',
         green       = '#447c69',
         lightgreen  = '#74c493',
@@ -94,7 +94,7 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         teal        = '#7c9fb0',
         blue        = '#5698c4',
         jade        = '#9abf88')
-    redToGray = c(
+    redToGray <- c(
         red          = '#ff1417',
         orange       = '#ff6611',
         redorange    = '#ff8844',
@@ -115,7 +115,7 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         brown        = '#a9834b',
         purple       = '#aa6688',
         gray         = '#767676')
-    paletteList = list(
+    paletteList <- list(
         basic     = basic,
         extended  = extended,
         bright    = bright,
@@ -125,7 +125,7 @@ jColors = function(palette='basic', colors='black', preview=FALSE) {
         trove     = trove,
         redToGray = redToGray)
     if (preview) {
-        par(mfrow=c(4,2))
+        par(mfrow = c(4,2))
         barplot(as.matrix(rep(1, length(basic))),
                 beside=TRUE, las=2, axes=F, main='basic',
                 col=basic,

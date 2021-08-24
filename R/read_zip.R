@@ -1,7 +1,8 @@
 #' Download a zipped file from the web and return the temporary paths to each
 #' file
 #'
-#' This function downloads and locally stores a zipped file from a url and then returns a list of the paths to each file
+#' This function downloads and locally stores a zipped file from a url and then
+#' returns a list of the paths to each file
 #' @param url A url to a zipped file
 #' @export
 #' @examples
