@@ -18,7 +18,7 @@
 #'
 #' # Create an example data frame of a sensitivity analysis - columns:
 #' # 'var'    <- The name of the variable being varied.
-#' # 'level'  <- High or Low (relative to the baseline).
+#' # 'level'  <- 'high' or 'low' (relative to the baseline).
 #' # 'value'  <- The value of the variable being varied.
 #' # 'result' <- The result of the output value at the varied variable value.
 #' data <- data.frame(
@@ -33,35 +33,45 @@
 #' library(ggplot2)
 #'
 #' ggTornado(
-#'     data = data,
+#'     data     = data,
 #'     baseline = 0.8, # Baseline result
-#'     var = 'var',
-#'     level = 'level',
-#'     value = 'value',
-#'     result = 'result'
+#'     var      = 'var',
+#'     level    = 'level',
+#'     value    = 'value',
+#'     result   = 'result'
 #' )
 #'
 ggTornado <- function(
     data,
     baseline,
-    var    = 'var',
-    level  = 'level',
-    value  = 'value',
-    result = 'result',
-    xlab   = 'Result',
-    ylab   = 'Parameter'
+    var,
+    level,
+    value,
+    result,
+    xlab = 'Result',
+    ylab = 'Parameter'
 ) {
 
     # Create a new data frame for plotting
     df <- data[c(var, level, value, result)]
     colnames(df) <- c('var', 'level', 'value', 'result')
 
-    df <- df %>%
-        # "Center" the result around the baseline result (so baseline is at 0)
-        mutate(result = result - baseline) %>%
-        # Compute the range in change from low to high levels for sorting
-        group_by(var) %>%
-        mutate(resultRange = sum(abs(result)))
+    # Add hust based on the level
+    df$hjust <- rep(c(0, 1), nrow(df) / 2)
+
+    # "Center" the result around the baseline result (so baseline is at 0)
+    df$result <- df$result - baseline
+
+    # Compute the range in change from low to high levels for sorting
+    df$resultRange <- ave(abs(df$result), df$var, FUN = sum)
+
+    # dplyr solution
+    # df <- df %>%
+    #     # "Center" the result around the baseline result (so baseline is at 0)
+    #     mutate(result = result - baseline) %>%
+    #     # Compute the range in change from low to high levels for sorting
+    #     group_by(var) %>%
+    #     mutate(resultRange = sum(abs(result)))
 
     # Compute labels for the x-axis
     lb        <- floor(10*min(df$result))/10
@@ -71,17 +81,18 @@ ggTornado <- function(
 
     # Make the tornado diagram
     plot <- ggplot(df,
-        # Use 'fct_reorder' to order the variables according to shareRange
-        aes(x=fct_reorder(var, resultRange), y=result, fill=level)) +
-        geom_bar(stat='identity', width=0.6) +
+        # Use reorder to order the variables according to shareRange
+        aes(x = result, y = reorder(var, resultRange), fill = level)) +
+        geom_col(width = 0.6) +
         # Add labels on bars
-        geom_text(aes(label=val), vjust=0.5) +
-        scale_y_continuous(limits=c(lb, ub), breaks=breaks, labels=breakLabs) +
-        labs(x=ylab, y=xlab) +
+        geom_text(aes(label = value, hjust = hjust), vjust = 0.5) +
+        scale_x_continuous(
+            limits = c(lb, ub),
+            breaks = breaks,
+            labels = breakLabs) +
+        labs(x = ylab, y = xlab) +
         theme_bw() +
-        # Remove legend
-        theme(legend.position='none') +
-        coord_flip()
+        theme(legend.position = 'none') # Remove legend
 
     return(plot)
 }

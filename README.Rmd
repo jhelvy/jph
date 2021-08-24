@@ -15,48 +15,53 @@ knitr::opts_chunk$set(
 )
 ```
 
-# logitr <a href='https://jhelvy.github.io/logitr/'><img src='man/figures/logitr-hex.png' align="right" height="139" /></a>
+# jph
 
 <!-- badges: start -->
-[![CRAN
-status](https://www.r-pkg.org/badges/version/logitr)](https://CRAN.R-project.org/package=logitr)
-[![Travis build status](https://travis-ci.com/jhelvy/logitr.svg?branch=master)](https://travis-ci.com/jhelvy/logitr)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/logitr?color=blue)](https://cran.r-project.org/package=logitr)
+
 <!-- badges: end -->
 
-Fast estimation of multinomial (MNL) and mixed logit (MXL) models in R with "Preference" space or "Willingness-to-pay" (WTP) space [utility parameterizations](https://jhelvy.github.io/logitr/articles/utility_models.html).
-
-The latest version includes support for:
-
-- Homogeneous multinomial logit (MNL) models
-- Heterogeneous mixed logit (MXL) models with normal and log-normal parameter distributions.
-- Preference space and WTP space utility parameterizations.
-- Weighted models to differentially weight individual choice observations.
-- Functions for computing WTP from preference space models.
-- Functions for predicting expected choices and choice probabilities for a set (or multiple sets) of alternatives based on an estimated model.
-- An option to run a multistart optimization loop that uses different random starting points in each iteration to search for different local minima (useful for non-convex problems like MXL models or models with WTP space parameterizations).
-
-Note: MXL models assume uncorrelated heterogeneity covariances and are estimated using maximum simulated likelihood based on the algorithms in Kenneth Train's book [*Discrete Choice Methods with Simulation, 2nd Edition (New York: Cambridge University Press, 2009)*](https://eml.berkeley.edu/books/choice2.html).
+A variety of functions that are sometimes useful for working in R.
 
 ## Installation
 
-```{r child="man/rmdchunks/installation.Rmd"}
+This package is not available on CRAN, but you can install it from [GitHub](https://github.com/jhelvy/jph):
+
+```r
+# install.packages("remotes")
+remotes::install_github("jhelvy/jph")
 ```
 
-## Basic Usage
+Load the library with:
 
-View the [basic usage](https://jhelvy.github.io/logitr/articles/basic_usage.html) page for details on how to use **logitr** to estimate models.
+```{r, eval=FALSE}
+library(jph)
+```
+
+## Contents
+
+This package contains the following functions:
+
+* `cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
+* `ggtornado()`: Creates a "tornado" plot using the ggplot2 library.
+* `jColors()`: A list of nice color palettes.
+* `jTheme()`: A custom theme for making plots in ggplot2.
+* `vector_code()`: Prints the code to concatenate a vector of strings.
+* `read_zip()`: Downloads a zipped file from the web and return the local paths to each file.
+* `source_dir()`: Source all R files in a given directory.
+
+To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.
 
 ## Author, Version, and License Information
 
 - Author: *John Paul Helveston* https://www.jhelvy.com/
-- Date First Written: *Sunday, September 28, 2014*
-- License: [MIT](https://github.com/jhelvy/logitr/blob/master/LICENSE.md)
+- Date First Written: *Saturday, March 18, 2017* in the Cathedral of Learning in Pittsburgh, PA
+- License: [MIT](https://github.com/jhelvy/jph/blob/master/LICENSE.md)
 
 ## Citation Information
 
-If you use this package for in a publication, I would greatly appreciate it if you cited it - you can get the citation by typing `citation("logitr")` into R:
+If you use this package for in a publication, I would greatly appreciate it if you cited it - you can get the citation by typing `citation("jph")` into R:
 
 ```{r}
-citation("logitr")
+citation("jph")
 ```

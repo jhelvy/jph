@@ -6,14 +6,13 @@ Authors@R:
            family  = "Helveston",
            role    = c("aut", "cre", "cph"),
            email   = "john.helveston@gmail.com",
-           comment = c(ORCID = "0000-0002-2657-9191")
+           comment = c(ORCID = "0000-0002-2657-9191"))
 Description: A variety of functions that are sometimes useful for working in R. First written Saturday, March 18, 2017 in the Cathedral of Learning in Pittsburgh, PA.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-VignetteBuilder: knitr
 Depends:
     R (>= 3.5.0)
 Suggests:
