@@ -6,6 +6,9 @@
 \usage{
 cs(...)
 }
+\arguments{
+\item{...}{Unquoted names.}
+}
 \description{
 Returns a vector of character strings (cs) from list of unquoted names.
 Copied from the Hmisc package.

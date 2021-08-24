@@ -6,6 +6,13 @@
 \usage{
 jColors(palette = "basic", colors = "black", preview = FALSE)
 }
+\arguments{
+\item{palette}{A palette name.}
+
+\item{colors}{Which colors you want from the palette}
+
+\item{preview}{Preview the colors in the palette?}
+}
 \description{
 Returns a list of different color palettes. Each palette is a data.frame.
 trove Palette found at http://colrd.com/palette/19308/
@@ -17,8 +24,10 @@ jColors(preview = TRUE)
 
 # Select colors from palette by name
 colors <- jColors('basic', c('blue', 'red'))
-barplot(as.matrix(rep(1, 2)),
-        beside = TRUE, las = 2, axes = F, main = 'basic', col = colors,
-        names.arg = c('basic-red', 'basic-blue'))
+barplot(
+  as.matrix(rep(1, 2)),
+  beside = TRUE, las = 2, axes = FALSE, main = 'basic', col = colors,
+  names.arg = c('basic-red', 'basic-blue')
+)
 }
 \keyword{colors}

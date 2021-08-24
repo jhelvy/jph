@@ -3,6 +3,9 @@
 #' Returns a list of different color palettes. Each palette is a data.frame.
 #' trove Palette found at http://colrd.com/palette/19308/
 #' redToGray Palette found at http://colrd.com/palette/21894/
+#' @param palette A palette name.
+#' @param colors Which colors you want from the palette
+#' @param preview Preview the colors in the palette?
 #' @keywords colors
 #' @export
 #' @examples
@@ -11,9 +14,11 @@
 #'
 #' # Select colors from palette by name
 #' colors <- jColors('basic', c('blue', 'red'))
-#' barplot(as.matrix(rep(1, 2)),
-#'         beside = TRUE, las = 2, axes = F, main = 'basic', col = colors,
-#'         names.arg = c('basic-red', 'basic-blue'))
+#' barplot(
+#'   as.matrix(rep(1, 2)),
+#'   beside = TRUE, las = 2, axes = FALSE, main = 'basic', col = colors,
+#'   names.arg = c('basic-red', 'basic-blue')
+#' )
 
 jColors <- function(palette = 'basic', colors = 'black', preview = FALSE) {
     basic <- c(
@@ -125,36 +130,36 @@ jColors <- function(palette = 'basic', colors = 'black', preview = FALSE) {
         trove     = trove,
         redToGray = redToGray)
     if (preview) {
-        par(mfrow = c(4,2))
-        barplot(as.matrix(rep(1, length(basic))),
+        graphics::par(mfrow = c(4,2))
+        graphics::barplot(as.matrix(rep(1, length(basic))),
                 beside=TRUE, las=2, axes=F, main='basic',
                 col=basic,
                 names.arg=names(basic))
-        barplot(as.matrix(rep(1, length(extended))),
+        graphics::barplot(as.matrix(rep(1, length(extended))),
                 beside=TRUE, las=2, axes=F, main='extended',
                 col=extended,
                 names.arg=names(extended))
-        barplot(as.matrix(rep(1, length(bright))),
+        graphics::barplot(as.matrix(rep(1, length(bright))),
                 beside=TRUE, las=2, axes=F, main='bright',
                 col=bright,
                 names.arg=names(bright))
-        barplot(as.matrix(rep(1, length(stan))),
+        graphics::barplot(as.matrix(rep(1, length(stan))),
                 beside=TRUE, las=2, axes=F, main='stan',
                 col=stan,
                 names.arg=names(stan))
-        barplot(as.matrix(rep(1, length(clean))),
+        graphics::barplot(as.matrix(rep(1, length(clean))),
                 beside=TRUE, las=2, axes=F, main='clean',
                 col=clean,
                 names.arg=names(clean))
-        barplot(as.matrix(rep(1, length(set3))),
+        graphics::barplot(as.matrix(rep(1, length(set3))),
                 beside=TRUE, las=2, axes=F, main='set3',
                 col=set3,
                 names.arg=names(set3))
-        barplot(as.matrix(rep(1, length(trove))),
+        graphics::barplot(as.matrix(rep(1, length(trove))),
                 beside=TRUE, las=2, axes=F, main='trove',
                 col=trove,
                 names.arg=names(trove))
-        barplot(as.matrix(rep(1, length(redToGray))),
+        graphics::barplot(as.matrix(rep(1, length(redToGray))),
                 beside=TRUE, las=2, axes=F, main='redToGray',
                 col=redToGray,
                 names.arg=names(redToGray))

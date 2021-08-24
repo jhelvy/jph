@@ -10,6 +10,8 @@ source_dir(path, trace = TRUE, ...)
 \item{path}{Path to directory.}
 
 \item{trace}{Defaults to TRUE.}
+
+\item{...}{Other arguments.}
 }
 \description{
 This function sources all R files in a given directory.

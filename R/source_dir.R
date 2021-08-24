@@ -3,6 +3,7 @@
 #' This function sources all R files in a given directory.
 #' @param path Path to directory.
 #' @param trace Defaults to TRUE.
+#' @param ... Other arguments.
 #' @export
 #' @examples
 #' source_dir('filePath')

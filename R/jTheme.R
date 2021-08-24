@@ -1,20 +1,22 @@
 #' Theme settings for plotting using ggplot2
 #'
 #' A custom theme for making plots in ggplot2.
+#' @importFrom ggplot2 theme theme_bw element_blank element_line element_rect
+#' element_text unit
 #' @export
 #' @examples
 #' # Make example plot:
 #' library(ggplot2)
 #' data("midwest", package = "ggplot2")
-#' plot <- ggplot(midwest, aes(x=area, y=poptotal)) +
-#'     geom_point(aes(col=state, size=popdensity)) +
-#'     geom_smooth(method="loess", se=F) +
+#' plot <- ggplot(midwest, aes(x = area, y = poptotal)) +
+#'     geom_point(aes(col = state, size = popdensity)) +
+#'     geom_smooth(method = "loess", se = FALSE) +
 #'     xlim(c(0, 0.1)) +
 #'     ylim(c(0, 500000)) +
-#'     labs(subtitle="Area Vs Population",
-#'         y="Population",
-#'         x="Area",
-#'         title="Scatterplot",
+#'     labs(subtitle = "Area Vs Population",
+#'         y = "Population",
+#'         x = "Area",
+#'         title = "Scatterplot",
 #'         caption = "Source: midwest")
 #' plot
 #'

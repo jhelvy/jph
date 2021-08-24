@@ -22,11 +22,11 @@ read_zip <- function(url) {
     # Create the placeholder file
     tf <- tempfile(tmpdir = td, fileext = '.zip')
     # Download file into the placeholder file
-    download.file(url, tf)
+    utils::download.file(url, tf)
     # Get the name of the first file in the zip archive
-    fname <- unzip(tf, list=TRUE)$Name[1]
+    fname <- utils::unzip(tf, list=TRUE)$Name[1]
     # Unzip the file to the temporary directory
-    unzip(tf, files = fname, exdir = td, overwrite = TRUE)
+    utils::unzip(tf, files = fname, exdir = td, overwrite = TRUE)
     # fpath is the full path to the extracted file
     fpath <- file.path(td, fname)
     return(fpath)

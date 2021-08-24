@@ -13,6 +13,9 @@
 #' is set at the value of 'value'.
 #' @param xlab The x-axis label (defaults to 'Result').
 #' @param ylab The y-axis label (defaults to 'Parameter').
+#' @importFrom ggplot2 ggplot aes geom_col geom_text scale_x_continuous
+#' labs theme theme_bw
+#' @importFrom rlang .data
 #' @export
 #' @examples
 #'
@@ -32,16 +35,16 @@
 #' # Make a tornado plot of the sensitivity analysis results:
 #' library(ggplot2)
 #'
-#' ggTornado(
-#'     data     = data,
+#' ggtornado(
+#'     data = data,
 #'     baseline = 0.8, # Baseline result
-#'     var      = 'var',
-#'     level    = 'level',
-#'     value    = 'value',
-#'     result   = 'result'
+#'     var    = 'var',
+#'     level  = 'level',
+#'     value  = 'value',
+#'     result = 'result'
 #' )
 #'
-ggTornado <- function(
+ggtornado <- function(
     data,
     baseline,
     var,
@@ -63,7 +66,7 @@ ggTornado <- function(
     df$result <- df$result - baseline
 
     # Compute the range in change from low to high levels for sorting
-    df$resultRange <- ave(abs(df$result), df$var, FUN = sum)
+    df$resultRange <- stats::ave(abs(df$result), df$var, FUN = sum)
 
     # dplyr solution
     # df <- df %>%
@@ -81,11 +84,14 @@ ggTornado <- function(
 
     # Make the tornado diagram
     plot <- ggplot(df,
-        # Use reorder to order the variables according to shareRange
-        aes(x = result, y = reorder(var, resultRange), fill = level)) +
+        aes(
+            x = .data$result,
+            y = stats::reorder(.data$var, .data$resultRange),
+            fill = level)
+        ) +
         geom_col(width = 0.6) +
         # Add labels on bars
-        geom_text(aes(label = value, hjust = hjust), vjust = 0.5) +
+        geom_text(aes(label = .data$value, hjust = .data$hjust), vjust = 0.5) +
         scale_x_continuous(
             limits = c(lb, ub),
             breaks = breaks,

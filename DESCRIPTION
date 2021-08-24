@@ -20,6 +20,10 @@ Suggests:
     dplyr,
     tidyr
 Imports:
-    ggplot2
+    ggplot2,
+    graphics,
+    utils,
+    rlang,
+    stats
 URL: https://github.com/jhelvy/jph
 BugReports: https://github.com/jhelvy/jph/issues
