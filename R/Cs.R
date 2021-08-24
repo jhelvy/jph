@@ -1,11 +1,11 @@
-#' Vector of character strings from list of unquoted names
+#' Vector of character strings (cs) from list of unquoted names
 #'
-#' Returns a vector of character strings from list of unquoted names.
-#' (Copied directly from the Hmisc package).
+#' Returns a vector of character strings (cs) from list of unquoted names.
+#' Copied from the Hmisc package.
 #' @export
 #' @examples
-#' Cs(a,cat,dog)
+#' cs(a, cat, dog)
 
-Cs = function(...) {
+cs <- function(...) {
     return(as.character(sys.call()[-1]))
 }

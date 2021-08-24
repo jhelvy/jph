@@ -13,12 +13,12 @@ redToGray Palette found at http://colrd.com/palette/21894/
 }
 \examples{
 # View sample barplots of each color palette
-jColors(preview=T)
+jColors(preview = TRUE)
 
 # Select colors from palette by name
-colors = jColors('basic', c('blue', 'red'))
+colors <- jColors('basic', c('blue', 'red'))
 barplot(as.matrix(rep(1, 2)),
-        beside=TRUE, las=2, axes=F, main='basic', col=colors,
-        names.arg=c('basic-red', 'basic-blue'))
+        beside = TRUE, las = 2, axes = F, main = 'basic', col = colors,
+        names.arg = c('basic-red', 'basic-blue'))
 }
 \keyword{colors}
