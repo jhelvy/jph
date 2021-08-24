@@ -96,7 +96,7 @@ ggtornado <- function(
             limits = c(lb, ub),
             breaks = breaks,
             labels = breakLabs) +
-        labs(x = ylab, y = xlab) +
+        labs(x = xlab, y = ylab) +
         theme_bw() +
         theme(legend.position = 'none') # Remove legend
 
