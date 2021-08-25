@@ -19,7 +19,6 @@
 #'   beside = TRUE, las = 2, axes = FALSE, main = 'basic', col = colors,
 #'   names.arg = c('basic-red', 'basic-blue')
 #' )
-
 jColors <- function(palette = 'basic', colors = 'black', preview = FALSE) {
     basic <- c(
         green  = '#8FC977FF',
