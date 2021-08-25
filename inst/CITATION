@@ -2,10 +2,10 @@ citHeader("To cite jph in publications use:")
 
 citEntry(
   entry    = "Manual",
-  title    = "jph: Miscellaneous R Functions Written By John Paul Helveston",
+  title    = "jph: Miscellaneous R Functions",
   author   = "John Paul Helveston",
   year     = "2021",
   note     = "R package version 1.2.0",
   url      = "https://jhelvy.github.io/jph/",
-  textVersion = "John Paul Helveston (2021). Miscellaneous R Functions Written By John Paul Helveston. R package version 1.2.0"
+  textVersion = "John Paul Helveston (2021). Miscellaneous R Functions. R package version 1.2.0"
 )

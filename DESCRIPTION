@@ -1,13 +1,14 @@
 Package: jph
-Title: Miscellaneous Functions Written By John Paul Helveston
+Title: Miscellaneous R Functions
 Version: 1.2.0
+Maintainer: John Helveston <john.helveston@gmail.com>
 Authors@R:
     person(given   = "John",
            family  = "Helveston",
            role    = c("aut", "cre", "cph"),
            email   = "john.helveston@gmail.com",
            comment = c(ORCID = "0000-0002-2657-9191"))
-Description: A variety of functions that are sometimes useful for working in R. First written Saturday, March 18, 2017 in the Cathedral of Learning in Pittsburgh, PA.
+Description: Miscellaneous R functions for working in R. First written Saturday, March 18, 2017 in the Cathedral of Learning in Pittsburgh, PA.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -22,8 +23,6 @@ Suggests:
 Imports:
     ggplot2,
     graphics,
-    utils,
-    rlang,
-    stats
+    utils
 URL: https://github.com/jhelvy/jph
 BugReports: https://github.com/jhelvy/jph/issues

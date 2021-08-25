@@ -15,17 +15,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# jph
+# jph: Miscellaneous R Functions
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-A variety of functions that are sometimes useful for working in R.
-
 ## Installation
 
-This package is not available on CRAN, but you can install it from [GitHub](https://github.com/jhelvy/jph):
+You can install this package from [GitHub](https://github.com/jhelvy/jph):
 
 ```r
 # install.packages("remotes")
@@ -43,13 +41,10 @@ library(jph)
 This package contains the following functions:
 
 * `cs()`: Returns a vector of character strings from list of unquoted names (copied directly from the Hmisc package).
-* `ci()`: Get confidence intervals for every column in a data frame.
-* `ggtornado()`: Creates a "tornado" plot using the ggplot2 package.
 * `jColors()`: A list of nice color palettes.
 * `jTheme()`: A custom theme for making plots in ggplot2.
 * `vector_code()`: Prints the code to concatenate a vector of strings.
 * `read_zip()`: Downloads a zipped file from the web and return the local paths to each file.
-* `repDf()`: Repeats a data frame `n` times.
 * `source_dir()`: Source all R files in a given directory.
 
 To view more details of any of the functions, run `?functionName()` in R, replacing 'functionName' with the name of the function.
