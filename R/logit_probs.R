@@ -27,5 +27,5 @@ logit_probs <- function(coefs, newdata, obsID = NULL, ci = 0.95) {
     sumExpV <- rowsum(expV, group = obsID, reorder = FALSE)
     reps <- table(obsID)
     probs <- expV / sumExpV[rep(seq_along(reps), reps),]
-    return(maddTools::ci(t(probs), ci))
+    return(ci(t(probs), ci))
 }

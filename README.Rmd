@@ -46,6 +46,7 @@ This package contains the following functions:
 * `jColors()`: A list of nice color palettes.
 * `jTheme()`: A custom theme for making plots in ggplot2.
 * `logit_probs()`: Computes logit fraction given a set of coefficients and alternatives.
+* `quantile_speed()`: A faster version of `quantile()`, taken from [this gist](https://gist.github.com/sikli/f1775feb9736073cefee97ec81f6b193)
 * `read_zip()`: Downloads a zipped file from the web and return the local paths to each file.
 * `rep_df()`: Repeats a data frame `n` times.
 * `source_dir()`: Source all R files in a given directory.
