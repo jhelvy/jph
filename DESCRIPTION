@@ -1,6 +1,6 @@
 Package: jph
 Title: Miscellaneous R Functions
-Version: 1.2.0
+Version: 1.3.0
 Maintainer: John Helveston <john.helveston@gmail.com>
 Authors@R:
     person(given   = "John",
