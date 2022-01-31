@@ -4,12 +4,13 @@
 \alias{jColors}
 \title{A list of nice color palettes.}
 \usage{
-jColors(palette = "basic", colors = "black", preview = FALSE)
+jColors(palette = NULL, colors = NULL, preview = FALSE)
 }
 \arguments{
-\item{palette}{A palette name.}
+\item{palette}{A palette name. Options include: \code{"basic"}, \code{"extended"},
+\code{"bright"}, \code{"stan"}, \code{"clean"}, \code{"set3"}, \code{"trove"}, \code{"redToGray"}.}
 
-\item{colors}{Which colors you want from the palette}
+\item{colors}{Which colors you want from the palette?}
 
 \item{preview}{Preview the colors in the palette?}
 }
@@ -19,15 +20,19 @@ trove Palette found at http://colrd.com/palette/19308/
 redToGray Palette found at http://colrd.com/palette/21894/
 }
 \examples{
-# View sample barplots of each color palette
+# Preview every color palette
 jColors(preview = TRUE)
 
-# Select colors from palette by name
-colors <- jColors('basic', c('blue', 'red'))
-barplot(
-  as.matrix(rep(1, 2)),
-  beside = TRUE, las = 2, axes = FALSE, main = 'basic', col = colors,
-  names.arg = c('basic-red', 'basic-blue')
-)
+# Preview a single color palette
+jColors(palette = "basic", preview = TRUE)
+
+# Preview a few colors from a single color palette
+jColors(palette = "basic", colors = c("red", "blue"), preview = TRUE)
+
+# Get the colors from a whole palette as a vector
+jColors(palette = "basic")
+
+# Get only select colors from a palette as a vector
+jColors(palette = "basic", colors = c("red", "blue"))
 }
 \keyword{colors}

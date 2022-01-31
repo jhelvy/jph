@@ -69,7 +69,7 @@ citation("jph")
 #> To cite jph in publications use:
 #> 
 #>   John Paul Helveston (2021). Miscellaneous R Functions. R package
-#>   version 1.2.0
+#>   version 1.5.0
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -77,7 +77,7 @@ citation("jph")
 #>     title = {jph: Miscellaneous R Functions},
 #>     author = {John Paul Helveston},
 #>     year = {2021},
-#>     note = {R package version 1.2.0},
+#>     note = {R package version 1.5.0},
 #>     url = {https://jhelvy.github.io/jph/},
 #>   }
 ```

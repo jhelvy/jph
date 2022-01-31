@@ -3,23 +3,28 @@
 #' Returns a list of different color palettes. Each palette is a data.frame.
 #' trove Palette found at http://colrd.com/palette/19308/
 #' redToGray Palette found at http://colrd.com/palette/21894/
-#' @param palette A palette name.
-#' @param colors Which colors you want from the palette
+#' @param palette A palette name. Options include: `"basic"`, `"extended"`,
+#' `"bright"`, `"stan"`, `"clean"`, `"set3"`, `"trove"`, `"redToGray"`.
+#' @param colors Which colors you want from the palette?
 #' @param preview Preview the colors in the palette?
 #' @keywords colors
 #' @export
 #' @examples
-#' # View sample barplots of each color palette
+#' # Preview every color palette
 #' jColors(preview = TRUE)
 #'
-#' # Select colors from palette by name
-#' colors <- jColors('basic', c('blue', 'red'))
-#' barplot(
-#'   as.matrix(rep(1, 2)),
-#'   beside = TRUE, las = 2, axes = FALSE, main = 'basic', col = colors,
-#'   names.arg = c('basic-red', 'basic-blue')
-#' )
-jColors <- function(palette = 'basic', colors = 'black', preview = FALSE) {
+#' # Preview a single color palette
+#' jColors(palette = "basic", preview = TRUE)
+#'
+#' # Preview a few colors from a single color palette
+#' jColors(palette = "basic", colors = c("red", "blue"), preview = TRUE)
+#'
+#' # Get the colors from a whole palette as a vector
+#' jColors(palette = "basic")
+#'
+#' # Get only select colors from a palette as a vector
+#' jColors(palette = "basic", colors = c("red", "blue"))
+jColors <- function(palette = NULL, colors = NULL, preview = FALSE) {
     basic <- c(
         green  = '#8FC977FF',
         blue   = '#80C5DCFF',
@@ -129,40 +134,44 @@ jColors <- function(palette = 'basic', colors = 'black', preview = FALSE) {
         trove     = trove,
         redToGray = redToGray)
     if (preview) {
-        graphics::par(mfrow = c(4,2))
-        graphics::barplot(as.matrix(rep(1, length(basic))),
-                beside=TRUE, las=2, axes=F, main='basic',
-                col=basic,
-                names.arg=names(basic))
-        graphics::barplot(as.matrix(rep(1, length(extended))),
-                beside=TRUE, las=2, axes=F, main='extended',
-                col=extended,
-                names.arg=names(extended))
-        graphics::barplot(as.matrix(rep(1, length(bright))),
-                beside=TRUE, las=2, axes=F, main='bright',
-                col=bright,
-                names.arg=names(bright))
-        graphics::barplot(as.matrix(rep(1, length(stan))),
-                beside=TRUE, las=2, axes=F, main='stan',
-                col=stan,
-                names.arg=names(stan))
-        graphics::barplot(as.matrix(rep(1, length(clean))),
-                beside=TRUE, las=2, axes=F, main='clean',
-                col=clean,
-                names.arg=names(clean))
-        graphics::barplot(as.matrix(rep(1, length(set3))),
-                beside=TRUE, las=2, axes=F, main='set3',
-                col=set3,
-                names.arg=names(set3))
-        graphics::barplot(as.matrix(rep(1, length(trove))),
-                beside=TRUE, las=2, axes=F, main='trove',
-                col=trove,
-                names.arg=names(trove))
-        graphics::barplot(as.matrix(rep(1, length(redToGray))),
-                beside=TRUE, las=2, axes=F, main='redToGray',
-                col=redToGray,
-                names.arg=names(redToGray))
+        if (is.null(palette)) {
+            graphics::par(mfrow = c(4, 2))
+            graphics::par(mar = c(1, 6, 1, 1))
+            make_barplot('basic', colors, paletteList)
+            make_barplot('extended', colors, paletteList)
+            make_barplot('bright', colors, paletteList)
+            make_barplot('stan', colors, paletteList)
+            make_barplot('clean', colors, paletteList)
+            make_barplot('set3', colors, paletteList)
+            make_barplot('trove', colors, paletteList)
+            make_barplot('redToGray', colors, paletteList)
+        } else {
+            graphics::par(mfrow = c(1, 1))
+            graphics::par(mar = c(1, 6, 1, 1))
+            make_barplot(palette, colors, paletteList)
+        }
     } else {
-        return(as.character(paletteList[[palette]][colors]))
+        if (is.null(colors)) {
+            return(paletteList[[palette]])
+        }
+        return(paletteList[[palette]][colors])
     }
+}
+
+make_barplot <- function(palette, colors, paletteList) {
+    if (is.null(colors)) {
+        colors <- paletteList[[palette]]
+    } else {
+        colors <- paletteList[[palette]][colors]
+    }
+    graphics::barplot(
+        as.matrix(rep(1, length(colors))),
+        beside    = TRUE,
+        las       = 2,
+        axes      = FALSE,
+        main      = palette,
+        col       = colors,
+        names.arg = names(colors),
+        horiz     = TRUE
+    )
 }
