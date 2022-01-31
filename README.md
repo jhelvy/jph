@@ -4,7 +4,6 @@
 # jph: Miscellaneous R Functions
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 ## Installation
@@ -27,34 +26,36 @@ library(jph)
 
 This package contains the following functions:
 
-  - `ci()`: Get confidence intervals for a vector of numbers or for
+-   `ci()`: Get confidence intervals for a vector of numbers or for
     every column in a data frame of numeric columns.
-  - `cs()`: Returns a vector of character strings from list of unquoted
+-   `cs()`: Returns a vector of character strings from list of unquoted
     names (copied directly from the Hmisc package).
-  - `ggtornado()`: Creates a “tornado” plot using the
+-   `ggtornado()`: Creates a “tornado” plot using the
     [{ggplot2}](https://ggplot2.tidyverse.org/) package.
-  - `jColors()`: A list of nice color palettes.
-  - `jTheme()`: A custom theme for making plots in ggplot2.
-  - `logit_probs()`: Computes logit fraction given a set of coefficients
+-   `jColors()`: A list of nice color palettes.
+-   `jTheme()`: A custom theme for making plots in ggplot2.
+-   `logit_probs()`: Computes logit fraction given a set of coefficients
     and alternatives.
-  - `quantile_speed()`: A faster version of `quantile()`, taken from
+-   `print_names()`: Prints the names of a data frame in a column so
+    they’re easy to copy.
+-   `quantile_speed()`: A faster version of `quantile()`, taken from
     [this
     gist](https://gist.github.com/sikli/f1775feb9736073cefee97ec81f6b193)
-  - `read_zip()`: Downloads a zipped file from the web and return the
+-   `read_zip()`: Downloads a zipped file from the web and return the
     local paths to each file.
-  - `rep_df()`: Repeats a data frame `n` times.
-  - `source_dir()`: Source all R files in a given directory.
-  - `vector_code()`: Prints the code to concatenate a vector of strings.
+-   `rep_df()`: Repeats a data frame `n` times.
+-   `source_dir()`: Source all R files in a given directory.
+-   `vector_code()`: Prints the code to concatenate a vector of strings.
 
 To view more details of any of the functions, run `?functionName()` in
 R, replacing ‘functionName’ with the name of the function.
 
 ## Author, Version, and License Information
 
-  - Author: *John Paul Helveston* <https://www.jhelvy.com/>
-  - Date First Written: *Saturday, March 18, 2017* in the Cathedral of
+-   Author: *John Paul Helveston* <https://www.jhelvy.com/>
+-   Date First Written: *Saturday, March 18, 2017* in the Cathedral of
     Learning in Pittsburgh, PA
-  - License: [MIT](https://github.com/jhelvy/jph/blob/master/LICENSE.md)
+-   License: [MIT](https://github.com/jhelvy/jph/blob/master/LICENSE.md)
 
 ## Citation Information
 
@@ -68,7 +69,7 @@ citation("jph")
 #> To cite jph in publications use:
 #> 
 #>   John Paul Helveston (2021). Miscellaneous R Functions. R package
-#>   version 1.4.0
+#>   version 1.2.0
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -76,7 +77,7 @@ citation("jph")
 #>     title = {jph: Miscellaneous R Functions},
 #>     author = {John Paul Helveston},
 #>     year = {2021},
-#>     note = {R package version 1.4.0},
+#>     note = {R package version 1.2.0},
 #>     url = {https://jhelvy.github.io/jph/},
 #>   }
 ```
