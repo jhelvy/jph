@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">jph</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.0</span>
       </span>
     </div>
 
@@ -74,18 +74,16 @@
 <div class="section level1">
 <div class="page-header"><h1 id="jph-miscellaneous-r-functions">jph: Miscellaneous R Functions<a class="anchor" aria-label="anchor" href="#jph-miscellaneous-r-functions"></a>
 </h1></div>
-<!-- badges: start -->
-<!-- badges: end -->
-<div class="section level2">
+<!-- badges: start --><!-- badges: end --><div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install this package from <a href="https://github.com/jhelvy/jph" class="external-link">GitHub</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"jhelvy/jph"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"jhelvy/jph"</span><span class="op">)</span></span></code></pre></div>
 <p>Load the package with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jhelvy/jph" class="external-link">jph</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jhelvy/jph" class="external-link">jph</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="contents">Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
@@ -107,8 +105,7 @@
 <li>
 <code><a href="reference/print_names.html">print_names()</a></code>: Prints the names of a data frame in a column so they’re easy to copy.</li>
 <li>
-<code><a href="reference/quantile_speed.html">quantile_speed()</a></code>: A faster version of <code><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile()</a></code>, taken from <a href="https://gist.github.com/sikli/f1775feb9736073cefee97ec81f6b193" class="external-link">this gist</a>
-</li>
+<code><a href="reference/qrender.html">qrender()</a></code>: <code><a href="https://rdrr.io/pkg/quarto/man/quarto_render.html" class="external-link">quarto::quarto_render()</a></code>, but output file can move. Related to <a href="https://github.com/quarto-dev/quarto-cli/discussions/2171#discussioncomment-5099284" class="external-link">this thread</a>.</li>
 <li>
 <code><a href="reference/read_zip.html">read_zip()</a></code>: Downloads a zipped file from the web and return the local paths to each file.</li>
 <li>
@@ -136,22 +133,22 @@
 </h2>
 <p>If you use this package for in a publication, I would greatly appreciate it if you cited it - you can get the citation by typing <code>citation("jph")</code> into R:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"jph"</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; To cite jph in publications use:</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   John Paul Helveston (2021). Miscellaneous R Functions. R package</span>
-<span class="co">#&gt;   version 1.5.0</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; A BibTeX entry for LaTeX users is</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   @Manual{,</span>
-<span class="co">#&gt;     title = {jph: Miscellaneous R Functions},</span>
-<span class="co">#&gt;     author = {John Paul Helveston},</span>
-<span class="co">#&gt;     year = {2021},</span>
-<span class="co">#&gt;     note = {R package version 1.5.0},</span>
-<span class="co">#&gt;     url = {https://jhelvy.github.io/jph/},</span>
-<span class="co">#&gt;   }</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"jph"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; To cite jph in publications use:</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   John Paul Helveston (2021). Miscellaneous R Functions. R package</span></span>
+<span><span class="co">#&gt;   version 1.5.0</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   @Manual{,</span></span>
+<span><span class="co">#&gt;     title = {jph: Miscellaneous R Functions},</span></span>
+<span><span class="co">#&gt;     author = {John Paul Helveston},</span></span>
+<span><span class="co">#&gt;     year = {2021},</span></span>
+<span><span class="co">#&gt;     note = {R package version 1.5.0},</span></span>
+<span><span class="co">#&gt;     url = {https://jhelvy.github.io/jph/},</span></span>
+<span><span class="co">#&gt;   }</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -201,7 +198,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

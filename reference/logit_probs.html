@@ -19,7 +19,7 @@ of alternatives."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">jph</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.0</span>
       </span>
     </div>
 
@@ -63,23 +63,30 @@ of alternatives.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">logit_probs</span><span class="op">(</span><span class="va">coefs</span>, <span class="va">newdata</span>, obsID <span class="op">=</span> <span class="cn">NULL</span>, ci <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">logit_probs</span><span class="op">(</span><span class="va">coefs</span>, <span class="va">newdata</span>, obsID <span class="op">=</span> <span class="cn">NULL</span>, ci <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>coefs</dt>
 <dd><p>A matrix of coefficients or draws of coefficients.</p></dd>
+
+
 <dt>newdata</dt>
 <dd><p>A data frame of a set of alternatives for which to compute
 logit probabilities. Each row is an alternative.</p></dd>
+
+
 <dt>obsID</dt>
 <dd><p>The name of the column that identifies each set of
 alternatives. Defaults to <code>NULL</code>, in which case it assumes the newdata
 are all one choice scenario.</p></dd>
+
+
 <dt>ci</dt>
 <dd><p>The sensitivity of the computed confidence interval (CI).
 Defaults to <code>ci = 0.95</code>, reflecting a 95% CI.</p></dd>
+
 </dl></div>
 
   </div>
@@ -94,7 +101,7 @@ Defaults to <code>ci = 0.95</code>, reflecting a 95% CI.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

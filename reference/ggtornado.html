@@ -18,7 +18,7 @@ are primarily used to display results of a sensitivity analysis.'><!-- mathjax -
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">jph</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.0</span>
       </span>
     </div>
 
@@ -61,57 +61,68 @@ are primarily used to display results of a sensitivity analysis.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">ggtornado</span><span class="op">(</span><span class="va">data</span>, <span class="va">baseline</span>, <span class="va">var</span>, <span class="va">level</span>, <span class="va">value</span>, <span class="va">result</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ggtornado</span><span class="op">(</span><span class="va">data</span>, <span class="va">baseline</span>, <span class="va">var</span>, <span class="va">level</span>, <span class="va">value</span>, <span class="va">result</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>data</dt>
 <dd><p>A data frame containing the results of a sensitivity analysis.</p></dd>
+
+
 <dt>baseline</dt>
 <dd><p>The baseline value for the sensitivity analysis.</p></dd>
+
+
 <dt>var</dt>
 <dd><p>The data column identifying the variable name being varied.</p></dd>
+
+
 <dt>level</dt>
 <dd><p>The data column identifying the sensitivity case level
 (usually 'high' or 'low', relative to the baseline).</p></dd>
+
+
 <dt>value</dt>
 <dd><p>The data column identifying the value of the variable being
 varied.</p></dd>
+
+
 <dt>result</dt>
 <dd><p>The data column identifying the result when the variable 'var'
 is set at the value of 'value'.</p></dd>
+
 </dl></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
-<span class="r-in"><span class="co"># Create an example data frame of a sensitivity analysis - columns:</span></span>
-<span class="r-in"><span class="co"># 'var'    &lt;- The name of the variable being varied.</span></span>
-<span class="r-in"><span class="co"># 'level'  &lt;- 'high' or 'low' (relative to the baseline).</span></span>
-<span class="r-in"><span class="co"># 'value'  &lt;- The value of the variable being varied.</span></span>
-<span class="r-in"><span class="co"># 'result' &lt;- The result of the output value at the varied variable value.</span></span>
-<span class="r-in"><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
-<span class="r-in">    var    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'price'</span>, <span class="st">'price'</span>, <span class="st">'fuelEconomy'</span>, <span class="st">'fuelEconomy'</span>,</span>
-<span class="r-in">               <span class="st">'accelTime'</span>, <span class="st">'accelTime'</span><span class="op">)</span>,</span>
-<span class="r-in">    level  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'high'</span>, <span class="st">'low'</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span>,</span>
-<span class="r-in">    value  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">25</span>, <span class="fl">15</span>, <span class="fl">10</span>, <span class="fl">6</span><span class="op">)</span>,</span>
-<span class="r-in">    result <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.95</span>, <span class="fl">0.15</span>, <span class="fl">0.90</span>, <span class="fl">0.60</span>, <span class="fl">0.85</span>, <span class="fl">0.75</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Make a tornado plot of the sensitivity analysis results:</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">ggtornado</span><span class="op">(</span></span>
-<span class="r-in">    data <span class="op">=</span> <span class="va">data</span>,</span>
-<span class="r-in">    baseline <span class="op">=</span> <span class="fl">0.8</span>, <span class="co"># Baseline result</span></span>
-<span class="r-in">    var    <span class="op">=</span> <span class="st">'var'</span>,</span>
-<span class="r-in">    level  <span class="op">=</span> <span class="st">'level'</span>,</span>
-<span class="r-in">    value  <span class="op">=</span> <span class="st">'value'</span>,</span>
-<span class="r-in">    result <span class="op">=</span> <span class="st">'result'</span></span>
-<span class="r-in"><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Create an example data frame of a sensitivity analysis - columns:</span></span></span>
+<span class="r-in"><span><span class="co"># 'var'    &lt;- The name of the variable being varied.</span></span></span>
+<span class="r-in"><span><span class="co"># 'level'  &lt;- 'high' or 'low' (relative to the baseline).</span></span></span>
+<span class="r-in"><span><span class="co"># 'value'  &lt;- The value of the variable being varied.</span></span></span>
+<span class="r-in"><span><span class="co"># 'result' &lt;- The result of the output value at the varied variable value.</span></span></span>
+<span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    var    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'price'</span>, <span class="st">'price'</span>, <span class="st">'fuelEconomy'</span>, <span class="st">'fuelEconomy'</span>,</span></span>
+<span class="r-in"><span>               <span class="st">'accelTime'</span>, <span class="st">'accelTime'</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    level  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'high'</span>, <span class="st">'low'</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    value  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">25</span>, <span class="fl">15</span>, <span class="fl">10</span>, <span class="fl">6</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    result <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.95</span>, <span class="fl">0.15</span>, <span class="fl">0.90</span>, <span class="fl">0.60</span>, <span class="fl">0.85</span>, <span class="fl">0.75</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Make a tornado plot of the sensitivity analysis results:</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">ggtornado</span><span class="op">(</span></span></span>
+<span class="r-in"><span>    data <span class="op">=</span> <span class="va">data</span>,</span></span>
+<span class="r-in"><span>    baseline <span class="op">=</span> <span class="fl">0.8</span>, <span class="co"># Baseline result</span></span></span>
+<span class="r-in"><span>    var    <span class="op">=</span> <span class="st">'var'</span>,</span></span>
+<span class="r-in"><span>    level  <span class="op">=</span> <span class="st">'level'</span>,</span></span>
+<span class="r-in"><span>    value  <span class="op">=</span> <span class="st">'value'</span>,</span></span>
+<span class="r-in"><span>    result <span class="op">=</span> <span class="st">'result'</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="ggtornado-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -126,7 +137,7 @@ is set at the value of 'value'.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
