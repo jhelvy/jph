@@ -15,6 +15,7 @@ This function downloads and locally stores a zipped file from a url and then
 returns a list of the paths to each file
 }
 \examples{
+\dontrun{
 # Download and view fuel economy data for all U.S. vehicles
 # from 1980 to present (https://www.fueleconomy.gov/feg/download.shtml):
 url <- 'https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip'
@@ -24,4 +25,5 @@ print(filePaths)
 # View first data file:
 data <- read.csv(filePaths[1], header = TRUE)
 head(data)
+}
 }

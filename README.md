@@ -38,8 +38,9 @@ This package contains the following functions:
   and alternatives.
 - `print_names()`: Prints the names of a data frame in a column so
   they’re easy to copy.
-- `qrender()`: `quarto::quarto_render()`, but output file can move.
-  Related to [this
+- `quarto_render_pdf()`: `quarto::quarto_render()`, but specific to
+  PDFs, and the output file can be in a different directory than the
+  working directory. Solves the issue discussed in [this
   thread](https://github.com/quarto-dev/quarto-cli/discussions/2171#discussioncomment-5099284).
 - `read_zip()`: Downloads a zipped file from the web and return the
   local paths to each file.

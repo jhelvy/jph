@@ -6,6 +6,7 @@
 #' @param url A url to a zipped file
 #' @export
 #' @examples
+#' \dontrun{
 #' # Download and view fuel economy data for all U.S. vehicles
 #' # from 1980 to present (https://www.fueleconomy.gov/feg/download.shtml):
 #' url <- 'https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip'
@@ -15,6 +16,7 @@
 #' # View first data file:
 #' data <- read.csv(filePaths[1], header = TRUE)
 #' head(data)
+#' }
 
 read_zip <- function(url) {
     # Create a temporary folder

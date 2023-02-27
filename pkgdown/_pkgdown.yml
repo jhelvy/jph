@@ -1,13 +1,15 @@
+url: https://jhelvy.github.io/jph/
+
 home:
   title: Miscellaneous R Functions Written By John Paul Helveston.
   description:
 
 template:
- params:
+  params:
     bootswatch: united
-twitter:
-    creator: "@JohnHelveston"
-    card: summary_large_image
+    twitter:
+      creator: "@JohnHelveston"
+      card: summary
 
 navbar:
   title: "jph"
