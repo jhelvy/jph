@@ -76,100 +76,17 @@ returns a list of the paths to each file</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Download and view fuel economy data for all U.S. vehicles</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># Download and view fuel economy data for all U.S. vehicles</span></span></span>
 <span class="r-in"><span><span class="co"># from 1980 to present (https://www.fueleconomy.gov/feg/download.shtml):</span></span></span>
 <span class="r-in"><span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">'https://www.fueleconomy.gov/feg/epadata/vehicles.csv.zip'</span></span></span>
 <span class="r-in"><span><span class="va">filePaths</span> <span class="op">=</span> <span class="fu">read_zip</span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">filePaths</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmplZna9C/vehicles.csv"</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># View first data file:</span></span></span>
 <span class="r-in"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">filePaths</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   barrels08 barrelsA08 charge120 charge240 city08 city08U cityA08 cityA08U</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  14.16714          0         0         0     19       0       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  27.04636          0         0         0      9       0       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  11.01889          0         0         0     23       0       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  27.04636          0         0         0     10       0       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  15.65842          0         0         0     17       0       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  13.52318          0         0         0     21       0       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   cityCD cityE cityUF co2 co2A co2TailpipeAGpm co2TailpipeGpm comb08 comb08U</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1      0     0      0  -1   -1               0       423.1905     21       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2      0     0      0  -1   -1               0       807.9091     11       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3      0     0      0  -1   -1               0       329.1481     27       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4      0     0      0  -1   -1               0       807.9091     11       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5      0     0      0  -1   -1               0       467.7368     19       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      0     0      0  -1   -1               0       403.9545     22       0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   combA08 combA08U combE combinedCD combinedUF cylinders displ</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0        0     0          0          0         4   2.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2       0        0     0          0          0        12   4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3       0        0     0          0          0         4   2.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       0        0     0          0          0         8   5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       0        0     0          0          0         4   2.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       0        0     0          0          0         4   1.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        drive engId   eng_dscr feScore fuelCost08 fuelCostA08</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1           Rear-Wheel Drive  9011      (FFS)      -1       2400           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2           Rear-Wheel Drive 22020  (GUZZLER)      -1       4600           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          Front-Wheel Drive  2100      (FFS)      -1       1900           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4           Rear-Wheel Drive  2850                 -1       4600           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 4-Wheel or All-Wheel Drive 66031 (FFS,TRBO)      -1       3300           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          Front-Wheel Drive 66020      (FFS)      -1       2300           0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   fuelType        fuelType1 ghgScore ghgScoreA highway08 highway08U highwayA08</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Regular Regular Gasoline       -1        -1        25          0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Regular Regular Gasoline       -1        -1        14          0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Regular Regular Gasoline       -1        -1        33          0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Regular Regular Gasoline       -1        -1        12          0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Premium Premium Gasoline       -1        -1        23          0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Regular Regular Gasoline       -1        -1        24          0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   highwayA08U highwayCD highwayE highwayUF hlv hpv    id lv2 lv4       make</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1           0         0        0         0   0   0     1   0   0 Alfa Romeo</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2           0         0        0         0   0   0    10   0   0    Ferrari</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3           0         0        0         0  19  77   100   0   0      Dodge</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4           0         0        0         0   0   0  1000   0   0      Dodge</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5           0         0        0         0   0   0 10000   0  14     Subaru</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6           0         0        0         0   0   0 10001   0  15     Subaru</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                 model mpgData phevBlended pv2 pv4 range rangeCity rangeCityA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Spider Veloce 2000       Y       false   0   0     0         0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          Testarossa       N       false   0   0     0         0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3             Charger       Y       false   0   0     0         0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 B150/B250 Wagon 2WD       N       false   0   0     0         0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    Legacy AWD Turbo       N       false   0  90     0         0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6              Loyale       N       false   0  88     0         0          0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   rangeHwy rangeHwyA           trany   UCity UCityA UHighway UHighwayA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        0         0    Manual 5-spd 23.3333      0  35.0000         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2        0         0    Manual 5-spd 11.0000      0  19.0000         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3        0         0    Manual 5-spd 29.0000      0  47.0000         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4        0         0 Automatic 3-spd 12.2222      0  16.6667         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5        0         0    Manual 5-spd 21.0000      0  32.0000         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        0         0 Automatic 3-spd 27.0000      0  33.0000         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            VClass year youSaveSpend guzzler trans_dscr tCharger sCharger</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1     Two Seaters 1985        -3000                          NA         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     Two Seaters 1985       -14000       T                  NA         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Subcompact Cars 1985         -500                SIL       NA         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            Vans 1985       -14000                          NA         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    Compact Cars 1993        -7500                        TRUE         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    Compact Cars 1993        -2500                          NA         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   atvType fuelType2 rangeA evMotor mfrCode c240Dscr charge240b c240bDscr</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                            0          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                                            0          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                                            0          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                                            0          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                                            0          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                                            0          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                      createdOn                   modifiedOn startStop phevCity</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Tue Jan 01 00:00:00 EST 2013 Tue Jan 01 00:00:00 EST 2013                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Tue Jan 01 00:00:00 EST 2013 Tue Jan 01 00:00:00 EST 2013                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Tue Jan 01 00:00:00 EST 2013 Tue Jan 01 00:00:00 EST 2013                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Tue Jan 01 00:00:00 EST 2013 Tue Jan 01 00:00:00 EST 2013                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Tue Jan 01 00:00:00 EST 2013 Tue Jan 01 00:00:00 EST 2013                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Tue Jan 01 00:00:00 EST 2013 Tue Jan 01 00:00:00 EST 2013                  0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   phevHwy phevComb</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       0        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       0        0</span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>

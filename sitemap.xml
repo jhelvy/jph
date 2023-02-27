@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://jhelvy.github.io/jph/404.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://jhelvy.github.io/jph/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/LICENSE.html</loc>
+    <loc>https://jhelvy.github.io/jph/LICENSE.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://jhelvy.github.io/jph/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://jhelvy.github.io/jph/index.html</loc>
   </url>
   <url>
-    <loc>/news/index.html</loc>
+    <loc>https://jhelvy.github.io/jph/news/index.html</loc>
   </url>
   <url>
-    <loc>/reference/Cs.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/Cs.html</loc>
   </url>
   <url>
-    <loc>/reference/ci.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/ci.html</loc>
   </url>
   <url>
-    <loc>/reference/ggtornado.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/ggtornado.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/jColors.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/jColors.html</loc>
   </url>
   <url>
-    <loc>/reference/jTheme.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/jTheme.html</loc>
   </url>
   <url>
-    <loc>/reference/logit_probs.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/logit_probs.html</loc>
   </url>
   <url>
-    <loc>/reference/print_names.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/print_names.html</loc>
   </url>
   <url>
-    <loc>/reference/qrender.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/quarto_render_pdf.html</loc>
   </url>
   <url>
-    <loc>/reference/read_zip.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/read_zip.html</loc>
   </url>
   <url>
-    <loc>/reference/rep_df.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/rep_df.html</loc>
   </url>
   <url>
-    <loc>/reference/source_dir.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/source_dir.html</loc>
   </url>
   <url>
-    <loc>/reference/vector_code.html</loc>
+    <loc>https://jhelvy.github.io/jph/reference/vector_code.html</loc>
   </url>
 </urlset>
