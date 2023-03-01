@@ -4,10 +4,13 @@
 \alias{quarto_render_move}
 \title{\code{quarto::quarto_render()}, but output file is moved to \code{output_dir}}
 \usage{
-quarto_render_move(input, output_dir = NULL, ...)
+quarto_render_move(input, output_file = NULL, output_dir = NULL, ...)
 }
 \arguments{
-\item{input}{A qmd file.}
+\item{input}{Path to the input qmd file.}
+
+\item{output_file}{The name of the output file. If using \code{NULL} then the
+output filename will be based on filename for the input file.}
 
 \item{output_dir}{Path to the output directory.}
 
