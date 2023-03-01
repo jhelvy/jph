@@ -63,13 +63,18 @@ output to <code>output_dir</code>.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">quarto_render_move</span><span class="op">(</span><span class="va">input</span>, output_dir <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">quarto_render_move</span><span class="op">(</span><span class="va">input</span>, output_file <span class="op">=</span> <span class="cn">NULL</span>, output_dir <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>input</dt>
-<dd><p>A qmd file.</p></dd>
+<dd><p>Path to the input qmd file.</p></dd>
+
+
+<dt>output_file</dt>
+<dd><p>The name of the output file. If using <code>NULL</code> then the
+output filename will be based on filename for the input file.</p></dd>
 
 
 <dt>output_dir</dt>
