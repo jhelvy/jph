@@ -1,3 +1,15 @@
+# v1.7.0
+
+- Added `write_html()`
+
+# v1.6.0
+
+- Added `quarto_render_move()`
+
+# v1.5.0
+
+- Removed `quantile_speed()` - it's now `fquantile()` in `logitr` package
+
 # v1.4.0
 
 - Added `quantile_speed()`

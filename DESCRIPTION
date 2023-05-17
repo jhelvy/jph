@@ -1,6 +1,6 @@
 Package: jph
 Title: Miscellaneous R Functions
-Version: 1.6.0
+Version: 1.7.0
 Maintainer: John Helveston <john.helveston@gmail.com>
 Authors@R:
     person(given   = "John",
@@ -26,6 +26,8 @@ Imports:
     logitr,
     quarto,
     rlang,
-    utils
+    rvest,
+    utils,
+    xml2
 URL: https://github.com/jhelvy/jph
 BugReports: https://github.com/jhelvy/jph/issues
