@@ -23,7 +23,6 @@ Suggests:
 Imports:
     ggplot2,
     graphics,
-    logitr,
     quarto,
     rlang,
     rvest,

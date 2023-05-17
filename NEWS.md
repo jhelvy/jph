@@ -1,6 +1,8 @@
 # v1.7.0
 
 - Added `write_html()`
+- Removed `ci()` - it's now in `logitr` package as of v1.0.2
+- Removed `logit_probs()` - it's now in `logitr` package as of v1.0.2
 
 # v1.6.0
 
