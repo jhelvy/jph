@@ -1,3 +1,7 @@
+# v1.8.0
+
+- Added `background_color()`
+
 # v1.7.0
 
 - Added `write_html()`
