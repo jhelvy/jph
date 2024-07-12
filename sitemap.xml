@@ -1,57 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jhelvy.github.io/jph/404.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/Cs.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/ggtornado.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/jColors.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/jTheme.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/print_names.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/quarto_render_move.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/read_zip.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/rep_df.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/source_dir.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/vector_code.html</loc>
-  </url>
-  <url>
-    <loc>https://jhelvy.github.io/jph/reference/write_html.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://jhelvy.github.io/jph/404.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/LICENSE-text.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/LICENSE.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/authors.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/index.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/news/index.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/Cs.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/background_color.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/ggtornado.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/index.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/jColors.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/jTheme.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/print_names.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/quarto_render_move.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/read_zip.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/rep_df.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/source_dir.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/vector_code.html</loc></url>
+<url><loc>https://jhelvy.github.io/jph/reference/write_html.html</loc></url>
 </urlset>
+
